@@ -17,9 +17,13 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:rgb(248, 237, 237)
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:#f8f0ea;
+    
+    
 }
+
+    
 
 /* HEADER */
 
@@ -35,11 +39,14 @@ header{
     background:rgba(0,0,0,0.5);
     z-index:1000;
 }
+nav a:hover{
+    color: #c8884a;
+}
 
 .logo{
     color:white;
     font-size:28px;
-    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 nav a{
@@ -52,7 +59,7 @@ nav a{
 
 .hero{
     height:100vh;
-    background:url("imagens/cozinhaazulpetroleo.png") center center/cover;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imagens/cozinhaazulpetroleo.png") center center/cover;
     display:flex;
     align-items:center;
     color:white;
@@ -65,6 +72,7 @@ nav a{
 
 .hero h1{
     font-size:47px;
+    
 }
 
 .hero span{
@@ -73,17 +81,20 @@ nav a{
 
 .hero p{
     margin-top:20px;
-    font-size:22px;
+    font-size:20px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
+    margin-top:50px;
     background:#c8884a;
     color:white;
     padding:15px 30px;
     text-decoration:none;
     border-radius:5px;
+}
+.btn:hover{
+    background: #d89d62;
 }
 
 /* SOBRE */
@@ -103,6 +114,7 @@ nav a{
 .sobre p{
     margin-top: 20px;
 }
+
 
 
 
@@ -130,6 +142,14 @@ nav a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 3px;
 
+}
+.card{
+    transition: 0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+   
+    
 }
 
 /* SERVIÇOS */
@@ -173,6 +193,21 @@ footer{
     padding:50px;
     text-align:center;
 }
+@media(max-width:768px){
+
+    .sobre{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content{
+        margin:20px;
+    }
+
+    .servicos-grid{
+        grid-template-columns:1fr;
+    }
+
+}
 
 
 
@@ -209,7 +244,8 @@ footer{
 <section class="sobre">
 
     <div>
-        <hr><h2>Sobre Nós</h2>
+        <hr>
+        <h2>Sobre Nós</h2>
 
         <h2>Excelência em cada</h2>
         <h2 style="color: #c8884a;">detalhe</h2>
