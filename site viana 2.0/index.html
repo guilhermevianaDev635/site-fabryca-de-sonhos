@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<title>Fabryca de Sonhos</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:rgb(248, 237, 237)
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("imagens/cozinhaazulpetroleo.png") center center/cover;
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+    margin-left:80px;
+}
+
+.hero h1{
+    font-size:47px;
+}
+
+.hero span{
+    color:#c8884a;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#c8884a;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* SOBRE */
+
+.sobre{
+    padding:100px 50px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    
+}
+
+.sobre img{
+    width:100%;
+    border-radius:10px;
+}
+.sobre p{
+    margin-top: 20px;
+}
+
+
+
+/* PROJETOS */
+
+.projetos{
+    padding:100px 50px;
+    text-align:center;
+}
+
+.grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+.projetos p{
+    margin-top: 20px;
+    color: #c8884a;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+
+}
+
+/* SERVIÇOS */
+
+.servicos{
+    background:#1a0f05;
+    color:white;
+    padding:100px 50px;
+}
+
+.servicos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    text-align:center;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+    padding:100px 50px;
+}
+
+.depoimentos-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.depoimento{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#1a0f05;
+    color:white;
+    padding:50px;
+    text-align:center;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Fabryca de Sonhos</div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Projetos</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Transformamos madeira em <span>sonhos reais</span></h1>
+
+        <p>
+            Móveis planejados e projetos personalizados.
+        </p>
+
+        <a href="#" class="btn">
+            Solicitar Orçamento
+        </a>
+    </div>
+</section>
+
+<section class="sobre">
+
+    <div>
+        <hr><h2>Sobre Nós</h2>
+
+        <h2>Excelência em cada</h2>
+        <h2 style="color: #c8884a;">detalhe</h2>
+        <p>A fabryca de sonhos nasceu da paixão por criar móveis que vão além da funcionalidade.Cada projeto é único, pensado especialmente para refletir o estilo e as necessidades de cada cliente.</p>
+
+        <p>
+            Marcenaria especializada em móveis planejados.
+        </p>
+    </div>
+
+    <img src="https://media.istockphoto.com/id/1067496776/pt/foto/top-view-of-drill-tool-and-another-equipment-on-wood-table-furniture-assembly-improvement-or.jpg?b=1&s=612x612&w=0&k=20&c=TvZV9kqmsRignL3VDqe0NEnc89VChxKjXwcz86wyys4=" alt="">
+</section>
+
+<section class="projetos">
+
+    <h2>Projetos</h2>
+    <hr>
+    <p>cozinhas</p>
+    <div class="grid">
+
+        <div class="card">
+            <img src="imagens/cozinhaazulpetroleo.png">
+        </div>
+
+        <div class="card">
+            <img src="https://scontent-gig4-1.xx.fbcdn.net/v/t1.15752-9/718042740_1137509731923518_5755444407928755412_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VFWjPeKpUwgQ7kNvwEeBkis&_nc_oc=AdrpZmOUwRVzz36WYMq2H63AqkKsEEv5FgBWBkq1IwLoJtzBf3CcHeQoWnM5m1Ka0Wg&_nc_zt=23&_nc_ht=scontent-gig4-1.xx&_nc_ss=7baaf&oh=03_Q7cD5gFGFcpWeCMAwBVVitAL2NO5YJxJ95BucBCnKWACIhxV1w&oe=6A4EA84A">
+        </div>
+
+        <div class="card">
+            <img src="https://scontent-gig4-2.xx.fbcdn.net/v/t1.15752-9/717495945_1321265516072545_5321390913639468679_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PdmCIUSxmCIQ7kNvwG4e0W4&_nc_oc=AdquWysuQUcsTQ8bqaCZTwyhaUitWTZkdU1JU7XZT7pzNJyAXYIczdk1GJmj5XU7vZ4&_nc_zt=23&_nc_ht=scontent-gig4-2.xx&_nc_ss=7baaf&oh=03_Q7cD5gGw7gXzv2OBGKxd_7VnFEZZQEwOw9IIdRPNdS5hkss8qg&oe=6A4ECEAB">
+        </div>
+        
+
+    </div>
+    
+    <p><strong>salas</strong></p>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1701421048887-873b365f058c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYSUyMHBhaW5lbHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1668015641987-06dcad3b9abd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYSUyMHBhaW5lbHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1664711942326-2c3351e215e6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRlc2lnbiUyMGRlJTIwaW50ZXJpb3JlfGVufDB8fDB8fHww">
+        </div>
+
+</section>
+
+<footer>
+
+    <h2>Fabryca de Sonhos</h2>
+
+    <p>WhatsApp: (21) 99999-9999</p>
+
+</footer>
+
+</body>
+</html>
