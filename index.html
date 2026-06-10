@@ -272,6 +272,86 @@ footer{
 
 }
 
+/* TABLET */
+@media (max-width: 1024px){
+
+    .hero h1{
+        font-size: 38px;
+    }
+
+    .servicos-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .depoimentos-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    header{
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a{
+        margin: 0 8px;
+    }
+
+    .hero-content{
+        margin: 20px;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .sobre{
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+
+    .projetos{
+        padding: 60px 20px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .servicos-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px){
+
+    .hero h1{
+        font-size: 1.6rem;
+    }
+
+    .btn{
+        padding: 12px 20px;
+    }
+
+    .logo{
+        font-size: 22px;
+    }
+}
+
 
 
 
