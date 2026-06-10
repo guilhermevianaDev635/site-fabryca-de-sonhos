@@ -116,6 +116,11 @@ nav a{
 @keyframes subir{
     from{
         opacity: 0;
+        transform: translateY(2000px);
+    }
+
+     to{
+        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -129,10 +134,28 @@ nav a{
     text-decoration:none;
     border-radius:50px;
     border: 1px solid #c8884a;
+
+    opacity:0;
+    animation: entrarBotao 1s ease forwards;
+    animation-delay:1.2s;
+}
+@keyframes entrarBotao{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 }
 .btn:hover{
-    box-shadow: 0 0 22px burlywood,
-                0 0 44px #c8884a;
+        box-shadow:  0 0 10px burlywood,
+        0 0 20px #c8884a,
+        0 0 40px #c8884a;
+        transform: translateY(-3px);
+        transition: 0.3s;
     
 }
 
@@ -179,6 +202,11 @@ nav a{
     
 }
 
+.card:hover img{
+    transform:scale(1.05);
+     
+}
+
 
 
 .projetos p{
@@ -195,6 +223,7 @@ nav a{
     border-radius: 50px;
     position: relative;
     margin-bottom: 30px;
+    
     
 }
 
@@ -362,12 +391,18 @@ summary{
     cursor:pointer;
     font-weight:bold;
     color:#a34904;
+    text-align: center;
+    padding: 10px;
 }
 
 details p{
     margin-top:10px;
 }
 
+.sobre p{
+    margin-top:20px;
+    line-height:1.8;
+}
 
 
 </style>
@@ -436,7 +471,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 </div>
 
 
-</p>
+
 
         <p>
             <strong>Marcenaria especializada em móveis planejados.</strong>
