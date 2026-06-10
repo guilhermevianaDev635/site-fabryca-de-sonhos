@@ -68,6 +68,15 @@ nav a{
     display:flex;
     align-items:center;
     color:white;
+    animation: zoom 2s ease;
+}
+@keyframes zoom{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
+    }
 }
 
 .hero-content{
@@ -77,26 +86,49 @@ nav a{
 
 .hero h1{
     font-size:47px;
-    
+    animation: subir 1s ease forwards; 
 }
 
 .hero span{
-    color:#c8884a;
+    animation: brilho 2s infinite alternate;
 }
+
+@keyframes brilho{
+    from{
+        text-shadow: 0 0 5px #cf853a;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #fccf05,
+            0 0 20px #fabc10,
+            0 0 40px #ffb007;
+    }
+}
+
 
 .hero p{
     margin-top:20px;
     font-size:20px;
+    animation: subir 1s ease forwards;
+    
+}
+@keyframes subir{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
 }
 
 .btn{
     display:inline-block;
     margin-top:50px;
-    background:#c8884a;
-    color:rgb(255, 255, 255);
+    background:transparent;
+    color:rgb(231, 225, 133);
     padding:15px 30px;
     text-decoration:none;
-    border-radius:5px;
+    border-radius:50px;
+    border: 1px solid #c8884a;
 }
 .btn:hover{
     box-shadow: 0 0 22px burlywood,
