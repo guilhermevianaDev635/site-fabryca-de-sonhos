@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="imagens/iconlogo.png" type="image/x-icon">
 
 <title>Fabryca de Sonhos</title>
 
@@ -49,9 +49,20 @@ nav a:hover{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
     color:white;
     font-size:28px;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo img{
+    width: 150px;
+    height:100px;
+    object-fit:contain;
+    
+    
 }
 
 nav a{
@@ -410,7 +421,10 @@ details p{
 <body>
 
 <header>
-    <div class="logo">Fabryca de Sonhos</div>
+    <div class="logo">
+    <img src="imagens/icon2.png" alt="Logo Fabryca de Sonhos">
+    <span>Fabryca de Sonhos</span>
+</div>
 
     <nav>
         <a href="#">Início</a>
