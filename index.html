@@ -605,6 +605,21 @@ footer a:hover{
 
 }
 
+.stat{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    transition:0.4s;
+    border:1px solid rgba(200,136,74,0.2);
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 0 10px rgba(200,136,74,0.4),
+        0 0 20px rgba(200,136,74,0.3);
+}
+
 .avaliacoes{
     padding:80px 20px;
     text-align:center;
@@ -624,6 +639,77 @@ footer a:hover{
     font-size:2rem;
     margin-bottom:10px;
 }
+
+.numeros-titulo{
+    text-align:center;
+    padding:70px 20px 30px;
+    background:#1a0f05;
+    color:white;
+}
+
+.numeros-titulo h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.numeros-titulo p{
+    max-width:700px;
+    margin:auto;
+    color:#ddd;
+}
+
+.diferenciais{
+    padding:100px 20px;
+    background:#f8f0ea;
+    text-align:center;
+}
+
+.diferenciais h2{
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#1a0f05;
+}
+
+.diferenciais-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.diferenciais-grid div{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.diferenciais-grid div:hover{
+    transform:translateY(-10px);
+    box-shadow:
+        0 0 10px rgba(200,136,74,0.3),
+        0 0 20px rgba(200,136,74,0.2);
+}
+
+.diferenciais-grid h3{
+    margin:15px 0;
+    color:#c8884a;
+}
+
+.diferenciais-grid p{
+    line-height:1.6;
+    color:#555;
+}
+
+@media(max-width:768px){
+
+    .diferenciais-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
 
 
 </style>
@@ -770,26 +856,39 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
         
 </section>
+
+<section class="numeros-titulo">
+
+    <h2>Resultados que Falam por Nós</h2>
+
+    <p>
+        Cada projeto entregue representa confiança,
+        dedicação e o compromisso de transformar sonhos
+        em realidade.
+    </p>
+
+</section>
+
 <section class="estatisticas">
 
     <div class="stat">
-        <h2>500+</h2>
-        <p>Projetos Realizados</p>
+        <h2 id="projetoss">0</h2>
+        <p>Projetos Entregues</p>
     </div>
 
     <div class="stat">
-        <h2>12+</h2>
-        <p>Anos de Experiência</p>
+        <h2 id="anos">0</h2>
+        <p>Anos Transformando Ambientes</p>
     </div>
 
     <div class="stat">
-        <h2>100%</h2>
-        <p>Dedicação</p>
-    </div>
-
-    <div class="stat">
-        <h2>1000+</h2>
+        <h2 id="clientes">0</h2>
         <p>Clientes Satisfeitos</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="dedicacao">0</h2>
+        <p>Compromisso com a Qualidade</p>
     </div>
 
 </section>
@@ -805,6 +904,40 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
     <h3>4,9 / 5</h3>
 
     <p>Baseado na satisfação dos nossos clientes.</p>
+
+</section>
+
+<section class="diferenciais">
+
+<h2>Por que escolher a Fabryca de Sonhos?</h2>
+
+<div class="diferenciais-grid">
+
+<div>
+🛠️
+<h3>Qualidade</h3>
+<p>Materiais selecionados e acabamento impecável.</p>
+</div>
+
+<div>
+📐
+<h3>Projetos Personalizados</h3>
+<p>Soluções criadas para cada cliente.</p>
+</div>
+
+<div>
+🤝
+<h3>Confiança</h3>
+<p>Compromisso do início ao fim.</p>
+</div>
+
+<div>
+⏱️
+<h3>Pontualidade</h3>
+<p>Respeito aos prazos acordados.</p>
+</div>
+
+</div>
 
 </section>
 
@@ -863,6 +996,56 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
     </div>
 
 </footer>
+
+<script>
+
+function animarNumero(id, final, sufixo = ""){
+
+    let numero = document.getElementById(id);
+
+    let atual = 0;
+
+    let incremento = Math.ceil(final / 100);
+
+    let contador = setInterval(() => {
+
+        atual += incremento;
+
+        if(atual >= final){
+            atual = final;
+            clearInterval(contador);
+        }
+
+        numero.textContent = atual + sufixo;
+
+    },20);
+
+}
+
+let iniciou = false;
+
+window.addEventListener("scroll", () => {
+
+    let secao = document.querySelector(".estatisticas");
+
+    let posicao = secao.getBoundingClientRect().top;
+
+    let tela = window.innerHeight;
+
+    if(posicao < tela && !iniciou){
+
+        iniciou = true;
+
+        animarNumero("projetoss",500,"+");
+        animarNumero("anos",12,"+");
+        animarNumero("clientes",1000,"+");
+        animarNumero("dedicacao",100,"%");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
