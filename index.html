@@ -709,6 +709,17 @@ footer a:hover{
 
 }
 
+.fade{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 0.8s ease;
+}
+
+.fade.aparecer{
+    opacity:1;
+    transform:translateY(0);
+}
+
 
 
 
@@ -746,7 +757,7 @@ footer a:hover{
     </div>
 </section>
 
-<section id="sobre"class="sobre">
+<section id="sobre"class="sobre fade">
     
 
     <div>
@@ -794,7 +805,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
     <img src="https://media.istockphoto.com/id/1067496776/pt/foto/top-view-of-drill-tool-and-another-equipment-on-wood-table-furniture-assembly-improvement-or.jpg?b=1&s=612x612&w=0&k=20&c=TvZV9kqmsRignL3VDqe0NEnc89VChxKjXwcz86wyys4=" alt="">
 </section>
 
-<section id="projetos"class="projetos">
+<section id="projetos"class="projetos fade">
 
     <h2>Projetos</h2>
     <hr>
@@ -857,7 +868,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         
 </section>
 
-<section class="numeros-titulo">
+<section class="numeros-titulo fade">
 
     <h2>Resultados que Falam por Nós</h2>
 
@@ -869,7 +880,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
 </section>
 
-<section class="estatisticas">
+<section class="estatisticas fade">
 
     <div class="stat">
         <h2 id="projetoss">0</h2>
@@ -893,7 +904,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
 </section>
 
-<section class="avaliacoes">
+<section class="avaliacoes fade">
 
     <h2>O que nossos clientes dizem</h2>
 
@@ -907,7 +918,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
 </section>
 
-<section class="diferenciais">
+<section class="diferenciais fade">
 
 <h2>Por que escolher a Fabryca de Sonhos?</h2>
 
@@ -1036,14 +1047,40 @@ window.addEventListener("scroll", () => {
 
         iniciou = true;
 
-        animarNumero("projetoss",500,"+");
+        animarNumero("projetoss",900,"+");
         animarNumero("anos",12,"+");
-        animarNumero("clientes",1000,"+");
+        animarNumero("clientes",1200,"+");
         animarNumero("dedicacao",100,"%");
 
     }
 
 });
+
+</script>
+
+<script>
+
+const elementos = document.querySelectorAll('.fade');
+
+function revelar(){
+
+    elementos.forEach(elemento => {
+
+        const topo = elemento.getBoundingClientRect().top;
+
+        const tela = window.innerHeight;
+
+        if(topo < tela - 100){
+            elemento.classList.add('aparecer');
+        }
+
+    });
+
+}
+
+window.addEventListener('scroll', revelar);
+
+revelar();
 
 </script>
 
