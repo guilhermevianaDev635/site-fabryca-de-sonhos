@@ -720,6 +720,35 @@ footer a:hover{
     transform:translateY(0);
 }
 
+.card-avaliacao{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card-avaliacao:hover{
+    transform:translateY(-10px);
+    box-shadow:
+        0 0 10px rgba(200,136,74,0.3),
+        0 0 20px rgba(200,136,74,0.2);
+}
+
+.estrelas{
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.card-avaliacao p{
+    line-height:1.7;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.card-avaliacao h4{
+    color:#c8884a;
+}
 
 
 
@@ -904,17 +933,49 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
 </section>
 
-<section class="avaliacoes fade">
+<section class="avaliacoes">
 
     <h2>O que nossos clientes dizem</h2>
 
-    <div class="nota">
-        ⭐⭐⭐⭐⭐
+    <div class="avaliacoes-grid">
+
+        <div class="card-avaliacao">
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+                Excelente atendimento e acabamento impecável.
+                Superou nossas expectativas!
+            </p>
+            <h4>Maria S.</h4>
+        </div>
+
+        <div class="card-avaliacao">
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+                Entregaram dentro do prazo e o resultado ficou
+                exatamente como planejamos.
+            </p>
+            <h4>Carlos R.</h4>
+        </div>
+
+        <div class="card-avaliacao">
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+                Profissionais sérios e muito caprichosos.
+                Recomendo sem dúvidas.
+            </p>
+            <h4>Ana P.</h4>
+        </div>
+
+         <div class="card-avaliacao">
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+                "Desde o primeiro contato fomos muito bem atendidos.
+O móvel ficou perfeito e transformou nosso ambiente."
+            </p>
+            <h4>Cliente - Rio de janeiro</h4>
+        </div>
+
     </div>
-
-    <h3>4,9 / 5</h3>
-
-    <p>Baseado na satisfação dos nossos clientes.</p>
 
 </section>
 
@@ -1048,7 +1109,7 @@ window.addEventListener("scroll", () => {
         iniciou = true;
 
         animarNumero("projetoss",900,"+");
-        animarNumero("anos",12,"+");
+        animarNumero("anos",13,"+");
         animarNumero("clientes",1200,"+");
         animarNumero("dedicacao",100,"%");
 
