@@ -99,7 +99,9 @@ nav a{
 /* HERO */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
+    height: auto;
+    padding: 120px 20px 60px;
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imagens/cozinhaazulpetroleo.png") center center/cover;
     display:flex;
     align-items:center;
@@ -364,8 +366,15 @@ footer{
         gap: 10px;
     }
 
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
     nav a{
-        margin: 0 8px;
+        margin: 0;
     }
 
     .hero-content{
@@ -748,6 +757,25 @@ footer a:hover{
 
 .card-avaliacao h4{
     color:#c8884a;
+}
+
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.grid{
+    justify-items: center;
+}
+
+.card{
+    width: 100%;
+    max-width: 300px;
 }
 
 
