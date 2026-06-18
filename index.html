@@ -17,6 +17,7 @@
   gtag('config', 'G-PW913X1F89');
 </script>
 
+<meta name="description" content="Marcenaria especializada em móveis planejados, cozinhas, quartos, salas e projetos personalizados no Rio de Janeiro.">
 
 
 <title>Fabryca de Sonhos</title>
@@ -772,6 +773,20 @@ footer a:hover{
     transition:0.4s;
 }
 
+.avaliacoes-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .avaliacoes-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+}
+
 .card-avaliacao:hover{
     transform:translateY(-10px);
     box-shadow:
@@ -811,6 +826,18 @@ img{
 .card{
     width: 100%;
     max-width: 300px;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:10px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
 }
 
 
