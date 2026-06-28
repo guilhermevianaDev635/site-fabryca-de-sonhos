@@ -175,17 +175,27 @@ nav a{
 .btn{
     display:inline-block;
     margin-top:50px;
-    background:transparent;
-    color:rgb(231, 225, 133);
-    padding:15px 30px;
+    padding:18px 40px;
+    background:linear-gradient(45deg,#fd7f00,#030200);
+    color:white;
     text-decoration:none;
     border-radius:50px;
-    border: 1px solid #c8884a;
-
-    opacity:0;
-    animation: entrarBotao 1s ease forwards;
-    animation-delay:1.2s;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:
+        0 0 10px rgba(200,136,74,0.6),
+        0 0 25px rgba(200,136,74,0.4);
+    transition:0.3s;
 }
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:
+        0 0 20px #c8884a,
+        0 0 40px #c8884a,
+        0 0 60px #c8884a;
+}
+
 @keyframes entrarBotao{
     from{
         opacity:0;
@@ -869,7 +879,7 @@ img{
     display: block;
 }
 
-.btn {
+.carrossel.btn {
     background: #000;
     color: white;
     border: none;
