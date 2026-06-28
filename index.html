@@ -111,7 +111,7 @@ nav a{
     min-height:100vh;
     height: auto;
     padding: 120px 20px 60px;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imagens/cozinhaazulpetroleo.png") center center/cover;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imagens/cozinhamadeiradacompedramarmore.jpeg") center center/cover;
     display:flex;
     align-items:center;
     color:white;
@@ -840,6 +840,65 @@ img{
 
 }
 
+.avaliacoes {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.slides {
+    width: 300px;
+    max-width: 90%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.indicadores {
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.ativo {
+    background: #333;
+}
 
 
 </style>
@@ -922,7 +981,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         </p>
     </div>
 
-    <img src="imagens/refiladora.jpeg" alt="">
+    <img src="imagens/sugar.jpeg" alt="">
 </section>
 
 <section id="projetos"class="projetos fade">
@@ -942,7 +1001,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         </div>
 
         <div class="card">
-            <img src="https://scontent-gig4-2.xx.fbcdn.net/v/t1.15752-9/717495945_1321265516072545_5321390913639468679_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PdmCIUSxmCIQ7kNvwG4e0W4&_nc_oc=AdquWysuQUcsTQ8bqaCZTwyhaUitWTZkdU1JU7XZT7pzNJyAXYIczdk1GJmj5XU7vZ4&_nc_zt=23&_nc_ht=scontent-gig4-2.xx&_nc_ss=7baaf&oh=03_Q7cD5gGw7gXzv2OBGKxd_7VnFEZZQEwOw9IIdRPNdS5hkss8qg&oe=6A4ECEAB">
+            <img src="imagens/armarioconect.jpeg">
         </div>
         
 
@@ -976,11 +1035,11 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         </div>
 
         <div class="card">
-            <img src="https://plus.unsplash.com/premium_photo-1675963768647-78e4178fc504?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cXVhcnRvcyUyMG1kZnxlbnwwfHwwfHx8MA%3D%3D">
+            <img src="imagens/guardaroupaportafechada.jpeg">
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1757344454333-cc666252e596?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHF1YXJ0b3MlMjBtZGZ8ZW58MHx8MHx8fDA%3D">
+            <img src="imagens/guardaroupaportaaberta.jpeg">
         </div>
 
         
@@ -1024,6 +1083,39 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
     </div>
 
 </section>
+<hr>
+<hr>
+<h2>AVALIAÇÕES ⭐</h2>
+<section class="feed-clientes">
+    
+    <section class="avaliacoes">
+        <h2>AVALIAÇÕES ⭐</h2>
+
+    <p>O que nossos clientes dizem</P>
+
+    <div class="carrossel">
+        <button class="btn prev">&#10094;</button>
+
+        <div class="slides">
+            <img src="imagens/fedbekcliente3.jpeg" class="slide ativo" alt="Avaliação 1">
+            <img src="imagens/fedbekclien4t (2).jpeg" class="slide" alt="Avaliação 2">
+            <img src="imagens/fedbekclien4t (3).jpeg" class="slide" alt="Avaliação 3">
+            <img src="imagens/fedbekclien4t (4).jpeg" class="slide" alt="Avaliação 4">
+        </div>
+
+        <button class="btn next">&#10095;</button>
+    </div>
+
+    <div class="indicadores">
+        <span class="dot ativo"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+  
+</section>
 
 <section class="avaliacoes">
     <a href="https://www.google.com/search?q=fabrica+sonhos&sca_esv=a0bbf15206a54e7d&sxsrf=APpeQnu-nJw3YhsRUNBJKKo_k9UzxTwVWg:1782577165251&udm=1&lsack=Dfg_apirDunc1sQP77L3oAw&sa=X&ved=2ahUKEwjY5d-16aeVAxVprpUCHW_ZHcQQjGp6BAglEAA&biw=958&bih=902&dpr=1#sv=CAESygEKtgESswEKd0FKaVQ0dExxN1RDYWFpdGtoLUVpUVMyak9sMWNQMkRxRWQ5MlhueUN5UElfOFhkZU5OTElPUFJfdDJhU0tWc3czTGxkbUlmSUhEZFRxSk4zTklQQnNXQ0Q3cXNKVloxUkhFaVhZN2k0bjJ5NVNxYTE4UTR2MWdVEhRIZmdfYXRabi10TFd4QV9RNUloQRoiQURzcjlmUi1Ld2I4cjYzeDNVQXAwaUZhTmQ3VUJ1cjJidxIEODA1MRoBMyoAMAA4AUAAGAAg_-DnyAVKAhAC" target="_blank">
@@ -1041,48 +1133,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
   </button>
 </a>
 
-    <h2>O que nossos clientes dizem</h2>
-
-    <div class="avaliacoes-grid">
-
-        <div class="card-avaliacao">
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>
-                Excelente atendimento e acabamento impecável.
-                Superou nossas expectativas!
-            </p>
-            <h4>Maria S.</h4>
-        </div>
-
-        <div class="card-avaliacao">
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>
-                Entregaram dentro do prazo e o resultado ficou
-                exatamente como planejamos.
-            </p>
-            <h4>Carlos R.</h4>
-        </div>
-
-        <div class="card-avaliacao">
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>
-                Profissionais sérios e muito caprichosos.
-                Recomendo sem dúvidas.
-            </p>
-            <h4>Ana P.</h4>
-        </div>
-
-         <div class="card-avaliacao">
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>
-                "Desde o primeiro contato fomos muito bem atendidos.
-O móvel ficou perfeito e transformou nosso ambiente."
-            </p>
-            <h4>Cliente - Rio de janeiro</h4>
-        </div>
-
-    </div>
-
+   
 </section>
 
 <section class="diferenciais fade">
@@ -1250,6 +1301,34 @@ function revelar(){
 window.addEventListener('scroll', revelar);
 
 revelar();
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let atual = 0;
+
+function mostrarSlide(index) {
+    slides.forEach(slide => slide.classList.remove("ativo"));
+    dots.forEach(dot => dot.classList.remove("ativo"));
+
+    slides[index].classList.add("ativo");
+    dots[index].classList.add("ativo");
+}
+
+document.querySelector(".next").addEventListener("click", () => {
+    atual++;
+    if (atual >= slides.length) {
+        atual = 0;
+    }
+    mostrarSlide(atual);
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    atual--;
+    if (atual < 0) {
+        atual = slides.length - 1;
+    }
+    mostrarSlide(atual);
+});
 
 </script>
 
