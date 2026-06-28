@@ -910,6 +910,78 @@ img{
     background: #333;
 }
 
+.empresa{
+    padding:80px 50px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.empresa img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.empresa h2{
+    color:#c8884a;
+    margin-bottom:20px;
+}
+
+.empresa p{
+    line-height:1.8;
+}
+
+.reverso img{
+    order:2;
+}
+
+.reverso div{
+    order:1;
+}
+
+@media(max-width:768px){
+    .empresa{
+        grid-template-columns:1fr;
+        padding:50px 20px;
+    }
+
+    .reverso img,
+    .reverso div{
+        order:initial;
+    }
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-100px);
+    transition:1s;
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(100px);
+    transition:1s;
+}
+
+.fade-up{
+    opacity:0;
+    transform:translateY(100px);
+    transition:1s;
+}
+
+.fade-down{
+    opacity:0;
+    transform:translateY(-100px);
+    transition:1s;
+}
+
+.aparecer{
+    opacity:1;
+    transform:translate(0);
+}
+
 
 </style>
 
@@ -986,13 +1058,73 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
 
 
+
         <p>
             <strong>Marcenaria especializada em móveis planejados.</strong>
         </p>
     </div>
+    
 
     <img src="imagens/sugar.jpeg" alt="">
 </section>
+
+<section class="empresa fade-left">
+
+    <img src="imagens/armarioconect.jpeg" alt="Projetos com LED">
+
+    <div>
+        <h2>Iluminação em LED</h2>
+        <p>
+            Desenvolvemos projetos com iluminação em LED,
+            criando ambientes modernos, aconchegantes e sofisticados.
+        </p>
+    </div>
+
+</section>
+
+<section class="empresa reverso fade-right">
+
+    <img src="imagens/portacommaoqq.jpeg" alt="MDF de qualidade">
+
+    <div>
+        <h2>MDF e Acabamentos</h2>
+        <p>
+            Trabalhamos com diversos padrões e acabamentos de MDF,
+            oferecendo opções que combinam com cada ambiente.
+        </p>
+    </div>
+
+</section>
+
+<section class="empresa fade-up">
+
+    <img src="imagens/portatailer.jpeg" alt="Ferragens">
+
+    <div>
+        <h2>Ferragens e Corrediças</h2>
+        <p>
+            Utilizamos dobradiças, corrediças telescópicas e
+            sistemas de amortecimento para garantir qualidade
+            e durabilidade.
+        </p>
+    </div>
+
+</section>
+
+<section class="empresa fade-down">
+
+    <img src="imagens/refiladora.jpeg" alt="Máquinas">
+
+    <div>
+        <h2>Máquinas e Tecnologia</h2>
+        <p>
+            Investimos constantemente em máquinas e equipamentos
+            modernos para oferecer precisão e acabamento impecável.
+        </p>
+    </div>
+
+</section>
+
 
 <section id="projetos"class="projetos fade">
 
@@ -1016,6 +1148,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         
 
     </div>
+    
     <hr>
     
     <p><strong>salas</strong></p>
@@ -1054,6 +1187,27 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 
         
     </div>
+
+    <hr>
+    <p><strong>banheiros</strong></p>
+    <hr>
+    <div class="grid">
+
+        <div class="card">
+            <img src="imagens/banheiromovel.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="imagens/banheirocinza900x1600.png">
+        </div>
+
+        <div class="card">
+            <img src="imagens/baheiros (2)900x1600.png">
+        </div>
+
+        
+    </div>
+
 
         
 </section>
@@ -1290,7 +1444,9 @@ window.addEventListener("scroll", () => {
 
 <script>
 
-const elementos = document.querySelectorAll('.fade');
+const elementos = document.querySelectorAll(
+    '.fade, .fade-left, .fade-right, .fade-up, .fade-down'
+);
 
 function revelar(){
 
@@ -1311,6 +1467,7 @@ function revelar(){
 window.addEventListener('scroll', revelar);
 
 revelar();
+
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 
