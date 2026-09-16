@@ -108,8 +108,11 @@ nav a{
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    padding:120px 20px 60px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+
+    padding: 120px 20px 60px;
 
     background:
         linear-gradient(
@@ -118,13 +121,14 @@ nav a{
         ),
         url("imagens/cozinhaverdejardin7.jfif");
 
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    display:flex;
-    align-items:center;
-    color:white;
+    display: flex;
+    align-items: center;
+
+    color: white;
 }
 
 
@@ -439,6 +443,20 @@ footer{
     .depoimentos-grid{
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px){
+
+    .hero{
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+        padding: 80px 20px 30px;
+    }
+
+    .hero-content{
+        margin-left: 20px;
+    }
+
 }
 
 /* CELULAR PEQUENO */
