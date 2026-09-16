@@ -118,7 +118,7 @@ nav a{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         ),
-        url("imagens/cozinhaverdejardin7.jfif");
+        url("imagens/cozinhaverdejardin8.jfif");
 
     background-size:cover;
     background-position:center;
@@ -1037,9 +1037,14 @@ img{
             Móveis planejados e projetos personalizados.
         </p>
 
-        <a href="https://wa.me/5521973663740" class="btn">
-            Solicitar Orçamento
-        </a>
+       <a href="https://wa.me/5521973663740"
+   class="btn"
+   onclick="gtag('event', 'solicitar_orcamento', {
+       'event_category': 'contato',
+       'event_label': 'Botao Solicitar Orcamento'
+   });">
+    Solicitar Orçamento
+</a>
     </div>
 </section>
 
@@ -1160,7 +1165,7 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         </div>
 
         <div class="card">
-            <img src="imagens/cinza (2).jpg">
+            <img src="imagens/cozinhaverdejardin.jpeg">
         </div>
 
         <div class="card">
@@ -1365,8 +1370,16 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
 </section>
 
 
-<a href="https://wa.me/5521973663740" class="whatsapp" target="_blank">
+<a href="https://wa.me/5521973663740"
+   class="whatsapp"
+   target="_blank"
+   onclick="gtag('event', 'clique_whatsapp', {
+       'event_category': 'contato',
+       'event_label': 'WhatsApp Flutuante'
+   });">
+
     <img src="imagens/watszap.jpg" alt="WhatsApp">
+
 </a>
 
 
