@@ -108,11 +108,10 @@ nav a{
 /* HERO */
 
 .hero{
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    min-height: 0;
+    width:100%;
+    min-height:100vh;
 
-    padding: 120px 20px 60px;
+    padding:140px 20px 60px;
 
     background:
         linear-gradient(
@@ -121,14 +120,14 @@ nav a{
         ),
         url("imagens/cozinhaverdejardin7.jfif");
 
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
 
-    color: white;
+    color:white;
 }
 
 
@@ -445,25 +444,7 @@ footer{
     }
 }
 
-@media(max-width:768px){
 
-    .hero{
-        aspect-ratio: auto;
-        min-height: 650px;
-        padding: 120px 20px 50px;
-
-        background-size: 100% auto;
-        background-position: center top;
-        background-repeat: no-repeat;
-    }
-
-    .hero-content{
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-}
 
 /* CELULAR PEQUENO */
 @media (max-width: 480px){
@@ -1009,6 +990,23 @@ img{
     transform:translate(0);
 }
 
+@media(max-width:768px){
+
+    .hero{
+        min-height:100svh;
+        padding:120px 20px 40px;
+
+        background-size:cover;
+        background-position:center;
+    }
+
+    .hero-content{
+        width:100%;
+        margin:0;
+        text-align:center;
+    }
+
+}
 
 </style>
 
