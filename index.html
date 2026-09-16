@@ -445,16 +445,22 @@ footer{
     }
 }
 
-@media (max-width: 768px){
+@media(max-width:768px){
 
     .hero{
-        aspect-ratio: 16 / 9;
-        min-height: 0;
-        padding: 80px 20px 30px;
+        aspect-ratio: auto;
+        min-height: 650px;
+        padding: 120px 20px 50px;
+
+        background-size: 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
     }
 
     .hero-content{
-        margin-left: 20px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 
 }
