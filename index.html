@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="shortcut icon" href="imagens/icon2.png" type="image/x-icon">
@@ -13,333 +12,287 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-PW913X1F89');
 </script>
 
-<meta name="description" content="Marcenaria especializada em móveis planejados, cozinhas, quartos, salas e projetos personalizados no Rio de Janeiro.">
+<meta name="description" content="Fabryca de Sonhos: marcenaria especializada em móveis planejados, cozinhas, quartos, salas e projetos personalizados no Rio de Janeiro.">
+<meta property="og:title" content="Fabryca de Sonhos — Móveis Planejados">
+<meta property="og:description" content="Marcenaria especializada em móveis planejados no Rio de Janeiro. Projetos em 3D, acabamento de qualidade e atendimento do início ao fim.">
+<meta property="og:image" content="https://fabrycadesonhos.com.br/imagens/cozinhaverdejardin8.jfif">
+<meta property="og:type" content="website">
 
+<title>Fabryca de Sonhos | Móveis Planejados no Rio de Janeiro</title>
 
-<title>Fabryca de Sonhos</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,560;9..144,650&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===================== TOKENS ===================== */
+
+:root{
+    --bg:              #f4ecdf;
+    --bg-alt:          #ede2cf;
+    --ink:             #2b2118;
+    --ink-soft:        #59493a;
+    --marca:           #241a10;
+    --marca-2:         #34261a;
+    --creme:           #f4ecdf;
+    --madeira:         #a9713c;
+    --madeira-escura:  #7c4f26;
+    --linha:           #ddccae;
+    --branco:          #fffdf9;
+
+    --raio:            8px;
+    --sombra:          0 10px 26px rgba(36,26,16,0.14);
+    --sombra-leve:     0 4px 14px rgba(36,26,16,0.10);
+
+    --serif:  'Fraunces', Georgia, serif;
+    --sans:   'Work Sans', Arial, sans-serif;
 }
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
 
 body{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background:#f8f0ea;
-    
-    
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    overflow-x:hidden;
 }
 
-    
+img{ max-width:100%; display:block; }
 
-/* HEADER */
+h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.15;
+}
+
+h2{ font-size:2.1rem; }
+
+p{ color:var(--ink-soft); }
+
+a{ color:inherit; }
+
+.container{ max-width:1180px; margin:0 auto; padding:0 40px; }
+
+section{ padding:96px 0; }
+
+.eyebrow-none{ /* intentionally unused marker for reviewers: no all-caps eyebrows in this design */ }
+
+/* ===================== HEADER ===================== */
 
 header{
     position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,0.5);
+    top:0; left:0; width:100%;
     z-index:1000;
-}
-header span{
-        animation: brilho 2s infinite alternate;
-}
-
-@keyframes brilho{
-    from{
-        text-shadow: 0 0 5px #cf853a;
-    }
-
-    to{
-        text-shadow:
-            0 0 10px #fccf05,
-            0 0 20px #fabc10,
-            0 0 40px #ffb007;
-    }
+    background:rgba(36,26,16,0.92);
+    backdrop-filter:blur(4px);
 }
 
-
-
-nav a:hover{
-    color: #c8884a;
-    text-shadow:
-          0 0 5px  burlywood ,
-          0 0 10px #c8884a,
-          0 0 20px #c8884a,
-          0 0 40px #c8884a
+.header-inner{
+    max-width:1180px;
+    margin:0 auto;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
     display:flex;
     align-items:center;
     gap:12px;
-    color:white;
-    font-size:28px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:var(--creme);
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    text-decoration:none;
+    letter-spacing:0.2px;
 }
 
-.logo img{
-    width: 50px;
-    height:50px;
-    object-fit:contain;
-    
-    
-}
+.logo img{ width:38px; height:38px; object-fit:contain; }
+
+nav{ display:flex; align-items:center; gap:34px; }
 
 nav a{
-    color:white;
+    color:var(--creme);
     text-decoration:none;
-    margin:0 15px;
+    font-size:15px;
+    opacity:0.88;
+    transition:opacity 0.2s ease;
 }
 
-/* HERO */
+nav a:hover{ opacity:1; }
+
+.nav-cta{
+    background:var(--madeira);
+    color:var(--branco) !important;
+    padding:10px 20px;
+    border-radius:var(--raio);
+    opacity:1 !important;
+    transition:background 0.2s ease;
+}
+
+.nav-cta:hover{ background:var(--madeira-escura); }
+
+.menu-toggle{ display:none; }
+
+@media(max-width:860px){
+    nav a:not(.nav-cta){ display:none; }
+    .header-inner{ padding:16px 22px; }
+}
+
+/* ===================== HERO ===================== */
 
 .hero{
-    width:100%;
-    min-height:100vh;
-
-    padding:140px 20px 60px;
-
+    position:relative;
+    min-height:92vh;
+    display:flex;
+    align-items:flex-end;
     background:
-        linear-gradient(
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        ),
+        linear-gradient(180deg, rgba(20,14,8,0.35) 0%, rgba(20,14,8,0.72) 100%),
         url("imagens/cozinhaverdejardin8.jfif");
-
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    align-items:center;
-
-    color:white;
 }
 
-
+.hero-inner{
+    max-width:1180px;
+    margin:0 auto;
+    width:100%;
+    padding:0 40px 90px;
+}
 
 .hero-content{
-    max-width:700px;
-    margin-left:80px;
+    max-width:620px;
+    opacity:0;
+    animation:surgir 0.9s ease forwards 0.2s;
+}
+
+@keyframes surgir{
+    from{ opacity:0; transform:translateY(18px); }
+    to{ opacity:1; transform:translateY(0); }
 }
 
 .hero h1{
-    font-size:47px;
-    animation: subir 1s ease forwards; 
+    color:var(--branco);
+    font-size:3.1rem;
+    font-weight:650;
 }
-
-.hero span{
-    animation: brilho 2s infinite alternate;
-}
-
-@keyframes brilho{
-    from{
-        text-shadow: 0 0 5px #cf853a;
-    }
-
-    to{
-        text-shadow:
-            0 0 10px #fccf05,
-            0 0 20px #fabc10,
-            0 0 40px #ffb007;
-    }
-}
-
 
 .hero p{
-    margin-top:20px;
-    font-size:20px;
-    animation: subir 1s ease forwards;
-    
-}
-@keyframes subir{
-    from{
-        opacity: 0;
-        transform: translateY(2000px);
-    }
-
-     to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color:#e9dfd0;
+    margin-top:18px;
+    font-size:1.15rem;
+    max-width:520px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:50px;
-    padding:18px 40px;
-    background:linear-gradient(45deg,#fd7f00,#030200);
-    color:white;
+    margin-top:34px;
+    padding:16px 32px;
+    background:var(--madeira);
+    color:var(--branco);
     text-decoration:none;
-    border-radius:50px;
-    font-size:20px;
-    font-weight:bold;
-    box-shadow:
-        0 0 10px rgba(200,136,74,0.6),
-        0 0 25px rgba(200,136,74,0.4);
-    transition:0.3s;
+    border-radius:var(--raio);
+    font-size:16px;
+    font-weight:600;
+    transition:background 0.2s ease, transform 0.2s ease;
 }
 
-.btn:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:
-        0 0 20px #c8884a,
-        0 0 40px #c8884a,
-        0 0 60px #c8884a;
+.btn:hover{ background:var(--madeira-escura); transform:translateY(-2px); }
+
+@media(max-width:768px){
+    .hero h1{ font-size:2.1rem; }
+    .hero p{ font-size:1rem; }
+    .hero-inner{ padding:0 22px 60px; }
 }
 
-@keyframes entrarBotao{
-    from{
-        opacity:0;
-        transform:translateX(-80px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-}
-.btn:hover{
-        box-shadow:  0 0 10px burlywood,
-        0 0 20px #c8884a,
-        0 0 40px #c8884a;
-        transform: translateY(-3px);
-        transition: 0.3s;
-    
-}
-
-
-/* SOBRE */
+/* ===================== SOBRE ===================== */
 
 .sobre{
-    padding:100px 50px;
+    padding:110px 0;
+}
+
+.sobre-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:start;
 }
 
 .sobre img{
-    width:90%;
-    border-radius:10px;
-}
-.sobre p{
-    margin-top: 20px;
-}
-
-
-
-
-/* PROJETOS */
-
-.projetos{
-    padding:100px 50px;
-    text-align:center;
-}
-
-.grid{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card img{
     width:100%;
-    border-radius: 10px;
-    transition: 0.05s;
-    
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
 }
 
-.card:hover img{
-    transform:scale(1.1) rotate(1deg);
-     
+.sobre h2{ margin-bottom:22px; }
+
+.sobre p{ margin-top:16px; line-height:1.75; }
+
+.destaque{
+    margin-top:28px;
+    padding-left:20px;
+    border-left:3px solid var(--madeira);
+    font-family:var(--serif);
+    font-size:1.15rem;
+    color:var(--ink);
 }
 
-
-
-.projetos p{
-    margin-top: 20px;
-    margin-bottom: 25px;
-    color: #c8884a;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 3px;
-
+.caixa{
+    margin-top:24px;
+    background:var(--bg-alt);
+    border-radius:var(--raio);
+    padding:6px 20px;
 }
 
-.card{
-    width: 300px;
-    border-radius: 50px;
-    position: relative;
-    margin-bottom: 30px;
-    transition: 0.5s;
-    
-    
-    
+summary{
+    cursor:pointer;
+    font-weight:600;
+    color:var(--madeira-escura);
+    padding:14px 0;
+    list-style:none;
 }
 
-.card::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50px;
-    background: #c8884a;
-    filter: blur(25px);
-    opacity: 0;
-    transition: 0.3s;
-    z-index: -1;
+summary::-webkit-details-marker{ display:none; }
+
+summary::before{ content:"+ "; }
+
+details[open] summary::before{ content:"– "; }
+
+details p{ padding-bottom:16px; line-height:1.75; }
+
+@media(max-width:860px){
+    .sobre-grid{ grid-template-columns:1fr; }
+    .sobre{ padding:70px 0; }
 }
 
-.card:hover::before{
-    opacity: 0.7;
+/* ===================== PROJETOS 3D / BARALHO ===================== */
+
+.sketchup{
+    background:var(--bg-alt);
+    text-align:left;
 }
 
-/* PROJETOS SKETCHUP */
-
-.projetos-sketchup{
-    padding:100px 50px;
-    text-align:center;
-    background:#f8f0ea;
+.sketchup .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:center;
 }
 
-.projetos-sketchup h2{
-    color:#1a0f05;
-    font-size:2.2rem;
-}
+.sketchup h2{ margin-bottom:18px; }
 
-.projetos-sketchup > p{
-    max-width:700px;
-    margin:20px auto 0;
-    line-height:1.8;
-    color:#555;
-}
-
-.projetos-sketchup .legenda{
-    margin-top:35px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    letter-spacing:0;
-    color:#555;
-    font-weight:normal;
-}
-
-/* BARALHO DE FOTOS */
+.sketchup p{ line-height:1.75; }
 
 .baralho-wrap{
-    margin-top:50px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -347,10 +300,9 @@ nav a{
 
 .baralho{
     position:relative;
-    width:340px;
-    height:340px;
-    max-width:85vw;
-    max-height:85vw;
+    width:320px;
+    height:320px;
+    max-width:100%;
 }
 
 .carta{
@@ -359,1155 +311,618 @@ nav a{
     width:100%;
     height:100%;
     object-fit:cover;
-    border-radius:14px;
-    border:6px solid #fff;
-    box-shadow:0 14px 30px rgba(0,0,0,0.28);
+    border-radius:10px;
+    border:6px solid var(--branco);
+    box-shadow:var(--sombra);
     cursor:pointer;
     pointer-events:none;
     user-select:none;
     -webkit-user-drag:none;
 }
 
-.carta:last-child{
-    pointer-events:auto;
-}
+.carta:last-child{ pointer-events:auto; }
 
-.carta:last-child:hover{
-    filter:brightness(1.05);
-    box-shadow:0 18px 36px rgba(0,0,0,0.35);
-}
+.carta:last-child:hover{ filter:brightness(1.04); }
 
 .dica-baralho{
-    margin-top:28px;
-    color:#a34904;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing:2px;
-    font-size:0.9rem;
+    margin-top:22px;
+    color:var(--ink-soft);
+    font-size:0.92rem;
 }
 
-@media(max-width:600px){
-    .baralho{
-        width:260px;
-        height:260px;
-    }
+@media(max-width:860px){
+    .sketchup .container{ grid-template-columns:1fr; text-align:center; }
+    .sketchup p{ margin:0 auto; }
 }
 
-
-/* SERVIÇOS */
-
-.servicos{
-    background:#1a0f05;
-    color:white;
-    padding:100px 50px;
-}
-
-.servicos-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    text-align:center;
-}
-
-/* DEPOIMENTOS */
-
-.depoimentos{
-    padding:100px 50px;
-}
-
-.depoimentos-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.depoimento{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-}
-
-/* RODAPÉ */
-
-footer{
-    background:#1a0f05;
-    color:white;
-    padding:50px;
-    text-align:center;
-}
-@media(max-width:768px){
-
-    .sobre{
-        grid-template-columns:1fr;
-    }
-
-    .hero-content{
-        margin:20px;
-    }
-
-    .servicos-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-/* TABLET */
-@media (max-width: 1024px){
-
-    .hero h1{
-        font-size: 38px;
-    }
-
-    .servicos-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .depoimentos-grid{
-        grid-template-columns: 1fr;
-    }
-}
-
-/* CELULAR */
-@media (max-width: 768px){
-
-    header{
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:10px;
-    }
-
-    nav a{
-        margin: 0;
-    }
-
-    .hero-content{
-        margin: 20px;
-        text-align: center;
-    }
-
-    .hero h1{
-        font-size: 2rem;
-    }
-
-    .hero p{
-        font-size: 1rem;
-    }
-
-    .sobre{
-        grid-template-columns: 1fr;
-        padding: 60px 20px;
-    }
-
-    .projetos{
-        padding: 60px 20px;
-    }
-
-    .projetos-sketchup{
-        padding: 60px 20px;
-    }
-
-    .card{
-        width: 100%;
-    }
-
-    .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .servicos-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .depoimentos-grid{
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
-/* CELULAR PEQUENO */
-@media (max-width: 480px){
-
-    .hero h1{
-        font-size: 1.6rem;
-    }
-
-    .btn{
-        padding: 12px 20px;
-    }
-
-    .logo{
-        font-size: 22px;
-    }
-}
-
-.caixa{
-    background:#f8f0ea;
-    padding:15px;
-    border-radius:10px;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:bold;
-    color:#a34904;
-    text-align: center;
-    padding: 10px;
-}
-
-details p{
-    margin-top:10px;
-}
-
-.sobre p{
-    margin-top:20px;
-    line-height:1.8;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-
-    width:65px;
-    height:65px;
-
-    background:#25D366;
-    border:2px solid white;
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-    font-size:35px;
-    text-decoration:none;
-
-    box-shadow:
-        0 0 10px #25D366,
-        0 0 20px #25D366,
-        0 0 40px #25D366;
-
-    animation:pulsar 2s infinite;
-    opacity:0;
-    animation: entrarBotao 1s ease forwards;
-    animation-delay:2.0s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-    box-shadow:
-        0 0 10px #25D366,
-        0 0 20px #25D366,
-        0 0 40px #25D366;
-}
-
-.whatsapp img{
-    width:35px;
-    height:35px;
-    border-radius: 50%;
-    border:2px solid rgb(6, 209, 67);
-    border-radius:50%;
-    
-
-    box-shadow:
-        0 0 5px rgb(79, 197, 95),
-        0 0 15px rgba(171, 235, 171, 0.8);
-}
-
-@keyframes pulsar{
-    0%{
-        box-shadow:
-            0 0 10px #25D366,
-            0 0 20px #25D366;
-    }
-
-    50%{
-        box-shadow:
-            0 0 20px #25D366,
-            0 0 40px #25D366,
-            0 0 60px #25D366;
-    }
-
-    100%{
-        box-shadow:
-            0 0 10px #25D366,
-            0 0 20px #25D366;
-    }
-}
-
-
-footer{
-    background:#1a0f05;
-    color:white;
-    padding:50px 20px;
-    text-align:center;
-    margin-top: 10px;
-}
-
-footer a{
-    color:#c8884a;
-    text-decoration:none;
-    margin:0 10px;
-    
-}
-
-footer a:hover{
-    color:white;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
-
-}
-
-@media(max-width:768px){
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-}
-.logo-footer  {
-        animation: brilho 2s infinite alternate;
-}
-
-@keyframes brilho{
-    from{
-        text-shadow: 0 0 5px #cf853a;
-    }
-
-    to{
-        text-shadow:
-            0 0 10px #fccf05,
-            0 0 20px #fabc10,
-            0 0 40px #ffb007;
-    }
-}
-
-.footer-grid p{
-    margin-top:10px;
-}
-
-.footer-grid h3{
-    margin-bottom:15px;
-}
-
-.estatisticas{
-    background:#1a0f05;
-    color:white;
-    padding:80px 20px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-
-    text-align:center;
-}
-
-.stat h2{
-    color:#c8884a;
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.stat p{
-    font-size:1.1rem;
-}
-
-@media(max-width:768px){
-
-    .estatisticas{
-        grid-template-columns:1fr;
-        gap:20px;
-        padding:40px 20px;
-    }
-
-    .stat{
-        width:100%;
-        max-width:350px;
-        margin:auto;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .stat h2{
-        font-size:2.2rem;
-    }
-
-    .stat p{
-        font-size:1rem;
-    }
-
-}
-
-.stat{
-    background:rgba(255,255,255,0.05);
-    padding:30px;
-    border-radius:15px;
-    transition:0.4s;
-    border:1px solid rgba(200,136,74,0.2);
-}
-
-.stat:hover{
-    transform:translateY(-8px);
-    box-shadow:
-        0 0 10px rgba(200,136,74,0.4),
-        0 0 20px rgba(200,136,74,0.3);
-}
-
-.avaliacoes{
-    padding:80px 20px;
-    text-align:center;
-}
-
-.avaliacoes h2{
-    margin-bottom:20px;
-}
-
-.nota{
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-.avaliacoes h3{
-    color:#c8884a;
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-.numeros-titulo{
-    text-align:center;
-    padding:70px 20px 30px;
-    background:#1a0f05;
-    color:white;
-}
-
-.numeros-titulo h2{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-.numeros-titulo p{
-    max-width:700px;
-    margin:auto;
-    color:#ddd;
-}
-
-.diferenciais{
-    padding:100px 20px;
-    background:#f8f0ea;
-    text-align:center;
-}
-
-.diferenciais h2{
-    font-size:2.5rem;
-    margin-bottom:50px;
-    color:#1a0f05;
-}
-
-.diferenciais-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.diferenciais-grid div{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.4s;
-}
-
-.diferenciais-grid div:hover{
-    transform:translateY(-10px);
-    box-shadow:
-        0 0 10px rgba(200,136,74,0.3),
-        0 0 20px rgba(200,136,74,0.2);
-}
-
-.diferenciais-grid h3{
-    margin:15px 0;
-    color:#c8884a;
-}
-
-.diferenciais-grid p{
-    line-height:1.6;
-    color:#555;
-}
-
-@media(max-width:768px){
-
-    .diferenciais-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-.fade{
-    opacity:0;
-    transform:translateY(50px);
-    transition:all 0.8s ease;
-}
-
-.fade.aparecer{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.card-avaliacao{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.4s;
-}
-
-.avaliacoes-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:35px;
-    margin-top:40px;
-}
-
-@media(max-width:768px){
-    .avaliacoes-grid{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-}
-
-.card-avaliacao:hover{
-    transform:translateY(-10px);
-    box-shadow:
-        0 0 10px rgba(200,136,74,0.3),
-        0 0 20px rgba(200,136,74,0.2);
-}
-
-.estrelas{
-    font-size:1.5rem;
-    margin-bottom:15px;
-}
-
-.card-avaliacao p{
-    line-height:1.7;
-    color:#555;
-    margin-bottom:20px;
-}
-
-.card-avaliacao h4{
-    color:#c8884a;
-}
-
-html, body{
-    overflow-x: hidden;
-    width: 100%;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-.grid{
-    justify-items: center;
-}
-
-.card{
-    width: 100%;
-    max-width: 300px;
-}
-
-@media(max-width:768px){
-
-    header{
-        padding:10px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-}
-
-.avaliacoes {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.carrossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.slides {
-    width: 300px;
-    max-width: 90%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    display: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.slide.ativo {
-    display: block;
-}
-
-.carrossel.btn {
-    background: #000;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-.indicadores {
-    margin-top: 15px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
-    background: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot.ativo {
-    background: #333;
-}
+/* ===================== FAIXAS ALTERNADAS (materiais) ===================== */
 
 .empresa{
-    padding:80px 50px;
+    padding:70px 0;
     display:grid;
-    grid-template-columns:55% 45%;
-    gap:50px;
+    grid-template-columns:1fr 1.2fr;
+    gap:56px;
     align-items:center;
 }
 
 .empresa img{
-    width:50%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    width:100%;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra-leve);
 }
 
-.empresa h2{
-    color:#c8884a;
-    margin-bottom:20px;
-}
+.empresa h3{ font-size:1.5rem; margin-bottom:12px; }
 
-.empresa p{
-    line-height:1.8;
-}
+.empresa.reverso{ grid-template-columns:1.2fr 1fr; }
 
-.reverso img{
-    order:2;
-}
+.empresa.reverso img{ order:2; }
 
-.reverso div{
-    order:1;
-}
+.empresa.reverso div{ order:1; }
 
-@media(max-width:768px){
-    .empresa{
+@media(max-width:860px){
+    .empresa, .empresa.reverso{
         grid-template-columns:1fr;
-        padding:50px 20px;
+        padding:40px 0;
     }
-
-    .reverso img,
-    .reverso div{
-        order:initial;
-    }
+    .empresa.reverso img, .empresa.reverso div{ order:initial; }
 }
 
-.fade-left{
-    opacity:0;
-    transform:translateX(-100px);
-    transition:1s;
+/* ===================== PORTFÓLIO (abas) ===================== */
+
+.projetos{ text-align:left; }
+
+.projetos-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom:36px;
 }
 
-.fade-right{
-    opacity:0;
-    transform:translateX(100px);
-    transition:1s;
+.abas{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
 }
 
-.fade-up{
-    opacity:0;
-    transform:translateY(100px);
-    transition:1s;
+.aba{
+    background:transparent;
+    border:1px solid var(--linha);
+    color:var(--ink-soft);
+    padding:10px 20px;
+    border-radius:999px;
+    font-family:var(--sans);
+    font-size:14px;
+    cursor:pointer;
+    transition:all 0.2s ease;
 }
 
-.fade-down{
-    opacity:0;
-    transform:translateY(-100px);
-    transition:1s;
+.aba.ativa{
+    background:var(--marca);
+    border-color:var(--marca);
+    color:var(--branco);
 }
 
-.aparecer{
-    opacity:1;
-    transform:translate(0);
+.grid-portfolio{
+    display:none;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.grid-portfolio.ativa{ display:grid; }
+
+.grid-portfolio img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow:var(--sombra-leve);
+}
+
+.grid-portfolio img:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--sombra);
+}
+
+@media(max-width:860px){
+    .grid-portfolio{ grid-template-columns:1fr 1fr; }
+}
+@media(max-width:560px){
+    .grid-portfolio{ grid-template-columns:1fr; }
+    .grid-portfolio img{ height:220px; }
+}
+
+/* ===================== ESTATÍSTICAS ===================== */
+
+.estatisticas-secao{
+    background:var(--marca);
+    color:var(--creme);
+    text-align:center;
+    padding:90px 0;
+}
+
+.estatisticas-secao h2{ color:var(--creme); }
+
+.estatisticas-secao > .container > p{
+    max-width:640px;
+    margin:16px auto 0;
+    color:#cdbfa9;
+}
+
+.estatisticas{
+    margin-top:56px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:36px;
+}
+
+.stat{
+    border-top:2px solid var(--madeira);
+    padding-top:20px;
+}
+
+.stat h3{
+    font-family:var(--serif);
+    color:var(--madeira);
+    font-size:2.6rem;
+}
+
+.stat p{ color:#cdbfa9; margin-top:6px; font-size:0.95rem; }
+
+@media(max-width:768px){
+    .estatisticas{ grid-template-columns:1fr 1fr; gap:28px; }
+}
+@media(max-width:480px){
+    .estatisticas{ grid-template-columns:1fr; }
+}
+
+/* ===================== AVALIAÇÕES ===================== */
+
+.avaliacoes{ text-align:center; }
+
+.avaliacoes p.sub{ color:var(--ink-soft); margin-top:10px; }
+
+.carrossel{
+    margin-top:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.slides{ width:320px; max-width:80vw; position:relative; }
+
+.slide{
+    width:100%;
+    display:none;
+    border-radius:var(--raio);
+    box-shadow:var(--sombra);
+}
+
+.slide.ativo{ display:block; }
+
+.carrossel-btn{
+    background:var(--branco);
+    border:1px solid var(--linha);
+    color:var(--marca);
+    width:46px; height:46px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+}
+
+.carrossel-btn:hover{ background:var(--bg-alt); }
+
+.indicadores{ margin-top:18px; }
+
+.dot{
+    height:8px; width:8px;
+    margin:0 4px;
+    background:var(--linha);
+    border-radius:50%;
+    display:inline-block;
+}
+
+.dot.ativo{ background:var(--madeira); }
+
+.btn-google{
+    display:inline-block;
+    margin-top:34px;
+    background:var(--marca);
+    color:var(--branco);
+    padding:14px 28px;
+    border-radius:var(--raio);
+    text-decoration:none;
+    font-size:15px;
+    transition:background 0.2s ease;
+}
+
+.btn-google:hover{ background:var(--marca-2); }
+
+/* ===================== DIFERENCIAIS ===================== */
+
+.diferenciais{ background:var(--bg-alt); text-align:left; }
+
+.diferenciais h2{ text-align:left; margin-bottom:48px; }
+
+.diferenciais-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+.diferenciais-grid div{ border-top:2px solid var(--linha); padding-top:18px; }
+
+.diferenciais-grid .icone{ font-size:1.6rem; }
+
+.diferenciais-grid h3{
+    font-size:1.15rem;
+    margin:12px 0 8px;
+    font-family:var(--serif);
+}
+
+.diferenciais-grid p{ font-size:0.95rem; line-height:1.6; }
+
+@media(max-width:860px){
+    .diferenciais-grid{ grid-template-columns:1fr 1fr; }
+}
+@media(max-width:520px){
+    .diferenciais-grid{ grid-template-columns:1fr; }
+}
+
+/* ===================== WHATSAPP FLUTUANTE ===================== */
+
+.whatsapp{
+    position:fixed;
+    bottom:24px; right:24px;
+    width:60px; height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    z-index:900;
+    transition:transform 0.2s ease;
+}
+
+.whatsapp:hover{ transform:scale(1.08); }
+
+.whatsapp img{ width:30px; height:30px; border-radius:50%; }
+
+/* ===================== RODAPÉ ===================== */
+
+footer{
+    background:var(--marca);
+    color:#cdbfa9;
+    padding:64px 0 40px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-grid h3{
+    color:var(--creme);
+    font-family:var(--serif);
+    font-size:1.1rem;
+    margin-bottom:14px;
+}
+
+.footer-grid p{ color:#cdbfa9; margin-top:8px; font-size:0.95rem; }
+
+.logo-footer{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--creme);
+    font-family:var(--serif);
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.logo-footer img{ width:36px; height:36px; }
+
+footer .redes a{
+    display:inline-block;
+    margin-right:14px;
+}
+
+footer .redes img{ width:26px; height:26px; opacity:0.85; transition:opacity 0.2s ease; }
+
+footer .redes img:hover{ opacity:1; }
+
+.copy{
+    max-width:1180px;
+    margin:44px auto 0;
+    padding:24px 40px 0;
+    border-top:1px solid rgba(255,255,255,0.08);
+    font-size:0.85rem;
+    color:#8d7c65;
 }
 
 @media(max-width:768px){
+    .footer-grid{ grid-template-columns:1fr; text-align:left; gap:30px; }
+}
 
-    .hero{
-        min-height:100svh;
-        padding:120px 20px 40px;
-
-        background-size:cover;
-        background-position:center;
-    }
-
-    .hero-content{
-        width:100%;
-        margin:0;
-        text-align:center;
-    }
-
+@media(max-width:600px){
+    section{ padding:64px 0; }
+    .container{ padding:0 22px; }
 }
 
 </style>
-
 </head>
 <body>
 
 <header>
-    
-    <div class="logo">
-    <img src="imagens/icon2.png" alt="Logo Fabryca de Sonhos">
-    <span>Fabryca de Sonhos</span>
-</div>
-
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-    </nav>
+    <div class="header-inner">
+        <a href="#inicio" class="logo">
+            <img src="imagens/icon2.png" alt="Logo Fabryca de Sonhos">
+            Fabryca de Sonhos
+        </a>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="https://wa.me/5521973663740" class="nav-cta"
+               onclick="gtag('event','solicitar_orcamento',{'event_category':'contato','event_label':'Menu'});">
+               Orçamento
+            </a>
+        </nav>
+    </div>
 </header>
 
-<section id="inicio"class="hero">
-    
-    <div class="hero-content">
-        <h1>Transformamos seus sonhos em <span> realidade</span></h1>
-
-        <p>
-            Móveis planejados e projetos personalizados.
-        </p>
-
-       <a href="https://wa.me/5521973663740"
-   class="btn"
-   onclick="gtag('event', 'solicitar_orcamento', {
-       'event_category': 'contato',
-       'event_label': 'Botao Solicitar Orcamento'
-   });">
-    Solicitar Orçamento
-</a>
+<section id="inicio" class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <h1>Móveis planejados, pensados para a sua casa</h1>
+            <p>Marcenaria sob medida no Rio de Janeiro — do projeto em 3D à instalação final, com acabamento e prazos que você pode confiar.</p>
+            <a href="https://wa.me/5521973663740" class="btn"
+               onclick="gtag('event','solicitar_orcamento',{'event_category':'contato','event_label':'Botao Hero'});">
+               Solicitar orçamento
+            </a>
+        </div>
     </div>
 </section>
 
-<section id="sobre"class="sobre fade">
-    
+<section id="sobre" class="sobre">
+    <div class="container sobre-grid">
+        <div>
+            <h2>Excelência em cada detalhe</h2>
 
+            <p>A Fabryca de Sonhos nasceu de um sonho simples, mas de uma vontade enorme de vencer. No início, não tínhamos uma grande oficina, máquinas modernas ou uma estrutura completa. Tudo começou em cima da laje de casa, com poucas ferramentas e muita determinação.</p>
+
+            <p>Os primeiros trabalhos eram pequenos: nichos, prateleiras e peças simples. Cada serviço era feito com dedicação, buscando sempre entregar qualidade. Como a laje tinha apenas uma parte coberta, quando chovia, a água molhava os materiais e atrapalhava o trabalho. Mesmo assim, desistir nunca foi uma opção.</p>
+
+            <p>Com o passar do tempo, surgiu a oportunidade de dar um passo maior. Foi então que decidi arriscar e alugar uma loja para começar a produzir móveis planejados e atender projetos maiores. No começo não foi fácil — os clientes ainda eram poucos, mas o aluguel precisava ser pago todos os meses. Houve momentos de preocupação e incerteza, mas a força de vontade sempre falou mais alto.</p>
+
+            <div class="caixa">
+                <details>
+                    <summary>Saiba mais sobre a nossa história</summary>
+                    <p>
+                        Pessoas que acreditaram quando tudo ainda era apenas um projeto: Cleilton Damiana, Vicente, Cleyton, Guilherme e Pedro. Cada um contribuiu de alguma forma para que a Fabryca de Sonhos continuasse crescendo. Hoje uns se aposentaram, outros seguiram outros caminhos — e seguimos com Cleilton, Cleyton e Tarlyane, que vieram para somar.
+                        <br><br>
+                        Com muito trabalho, dedicação e a confiança dos clientes, a empresa começou a conquistar seu espaço no mercado. Vieram novos projetos, novos desafios e novas conquistas, até chegar o momento de realizar mais um grande sonho: adquirir um espaço próprio e construir a marcenaria do zero, exatamente da forma que sempre imaginamos.
+                        <br><br>
+                        Hoje, a Fabryca de Sonhos é resultado de anos de luta, perseverança e amor pelo que fazemos. Crescemos sem esquecer nossas origens e seguimos com o mesmo compromisso de quando tudo começou na laje de casa.
+                    </p>
+                </details>
+            </div>
+
+            <p class="destaque">Mais do que fabricar móveis, nós realizamos sonhos — e é por isso que seguimos fortes no mercado, levando qualidade e confiança para clientes em todo o Brasil.</p>
+        </div>
+
+        <img src="imagens/sugar900x900.jpeg" alt="Móvel planejado produzido pela Fabryca de Sonhos">
+    </div>
+</section>
+
+<section class="sketchup">
+    <div class="container">
+        <div>
+            <h2>Projetos em 3D no SketchUp</h2>
+            <p>
+                Antes de colocar a mão na massa, colocamos sua ideia no papel — ou melhor, na tela.
+                Desenvolvemos cada projeto em 3D, para que você visualize móveis, cores, acabamentos
+                e a distribuição do ambiente exatamente como vão ficar, antes mesmo da produção começar.
+                Isso significa menos surpresas, mais acertos e a certeza de que o resultado final será
+                fiel ao que você imaginou.
+            </p>
+        </div>
+
+        <div class="baralho-wrap">
+            <div class="baralho" id="baralhoSketchup">
+                <img class="carta" src="imagensketchup/sketchup-cozinha3.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+                <img class="carta" src="imagensketchup/sketchup-quarto2.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+                <img class="carta" src="imagensketchup/sketchup-cozinha2.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+                <img class="carta" src="imagensketchup/sketchup-quarto3.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+                <img class="carta" src="imagensketchup/sketchup-cozinha.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+                <img class="carta" src="imagensketchup/sketchup-quarto.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+            </div>
+            <p class="dica-baralho">👆 Toque nas fotos para ver os próximos projetos</p>
+        </div>
+    </div>
+</section>
+
+<section class="empresa">
+    <img src="imagens/armarioconect.jpeg" alt="Projeto com iluminação em LED">
     <div>
-        <hr>
-        <h2>Sobre Nós</h2>
-
-        <h2>Excelência em cada</h2>
-        <h2 style="color: #c8884a;">detalhe...</h2>
-        <p>
-
-A Fabryca de Sonhos nasceu de um sonho simples, mas de uma vontade enorme de vencer. No início, não tínhamos uma grande oficina, máquinas modernas ou uma estrutura completa. Tudo começou em cima da laje de casa, com poucas ferramentas e muita determinação.
-
-Os primeiros trabalhos eram pequenos: nichos, prateleiras e peças simples. Cada serviço era feito com dedicação, buscando sempre entregar qualidade. Mas os desafios eram muitos. Como a laje tinha apenas uma parte coberta, quando chovia, a água molhava os materiais e atrapalhava o trabalho. Mesmo assim, desistir nunca foi uma opção.
-
-Com o passar do tempo, surgiu a oportunidade de dar um passo maior. Foi então que decidi arriscar e alugar uma loja para começar a produzir móveis planejados e atender projetos maiores. No começo não foi fácil. Os clientes ainda eram poucos, mas o aluguel precisava ser pago todos os meses. Houve momentos de preocupação e incerteza, mas a força de vontade sempre falou mais alto.
-
-Nessa caminhada, algumas pessoas foram fundamentais para que esse sonho continuasse de pé.</p>
-
-<div class="caixa">
-    <details>
-        <summary>📖 Saiba mais</summary>
-
-        <p>
-          Pessoas que acreditaram quando tudo ainda era apenas um projeto: Cleilton Damiana, Vicente, Cleyton, Guilherme e Pedro. Cada um contribuiu de alguma forma para que a Fabryca de Sonhos continuasse crescendo.
-Hoje uns se aposentaram outros seguiram outros caminhos . 
-Hoje estamos com Cleilton , Cleyton, tarlyane que véi para somar!
-
-Com muito trabalho, dedicação e a confiança dos clientes, a empresa começou a conquistar seu espaço no mercado. Vieram novos projetos, novos desafios e novas conquistas. Até que chegou o momento de realizar mais um grande sonho: adquirir um espaço próprio e construir a marcenaria do zero, exatamente da forma que sempre imaginamos.
-
-Hoje, a Fabryca de Sonhos é resultado de anos de luta, perseverança e amor pelo que fazemos. Crescemos sem esquecer nossas origens e continuamos trabalhando com o mesmo compromisso de quando tudo começou na laje de casa.
-
-Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos fortes no mercado, transformando ambientes e levando qualidade, beleza e confiança para clientes em todo o Brasil.
-        </p>
-    </details>
-</div>
-
-        <p>
-            <strong>Marcenaria especializada em móveis planejados.</strong>
-        </p>
+        <h3>Iluminação em LED</h3>
+        <p>Desenvolvemos projetos com iluminação em LED, criando ambientes modernos, aconchegantes e sofisticados.</p>
     </div>
-    
-
-    <img src="imagens/sugar900x900.jpeg" alt="">
 </section>
 
-<section class="projetos-sketchup fade">
-
-    <h2>Projetos em 3D no SketchUp</h2>
-
-    <p>
-        Antes de colocar a mão na massa, colocamos sua ideia no papel — ou melhor, na tela.
-        Desenvolvemos cada projeto em 3D no SketchUp, para que você visualize móveis, cores,
-        acabamentos e distribuição do ambiente exatamente como vão ficar, antes mesmo da
-        produção começar. Isso significa menos surpresas, mais acertos e a certeza de que o
-        resultado final será fiel ao que você imaginou.
-    </p>
-
-    <div class="baralho-wrap">
-        <div class="baralho" id="baralhoSketchup">
-            <img class="carta" src="imagensketchup/sketchup-cozinha.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
-            <img class="carta" src="imagensketchup/sketchup-quarto2.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
-            <img class="carta" src="imagensketchup/sketchup-cozinha2.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
-            <img class="carta" src="imagensketchup/sketchup-quarto3.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
-            <img class="carta" src="imagensketchup/sketchup-cozinha.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
-            <img class="carta" src="imagensketchup/sketchup-quarto.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
-        </div>
-        <p class="dica-baralho">👆 Toque nas fotos para ver os próximos projetos</p>
-    </div>
-
-</section>
-
-<section class="empresa fade-left">
-
-    <img src="imagens/armarioconect.jpeg" alt="Projetos com LED">
-
+<section class="empresa reverso">
+    <img src="imagens/portacommaoqq.jpeg" alt="Acabamento em MDF">
     <div>
-        <h2>Iluminação em LED</h2>
-        <p>
-            Desenvolvemos projetos com iluminação em LED,
-            criando ambientes modernos, aconchegantes e sofisticados.
-        </p>
+        <h3>MDF e acabamentos</h3>
+        <p>Trabalhamos com diversos padrões e acabamentos de MDF, oferecendo opções que combinam com cada ambiente.</p>
     </div>
-
 </section>
 
-<section class="empresa reverso fade-right">
-
-    <img src="imagens/portacommaoqq.jpeg" alt="MDF de qualidade">
-
+<section class="empresa">
+    <img src="imagens/portatailer.jpeg" alt="Ferragens e corrediças de qualidade">
     <div>
-        <h2>MDF e Acabamentos</h2>
-        <p>
-            Trabalhamos com diversos padrões e acabamentos de MDF,
-            oferecendo opções que combinam com cada ambiente.
-        </p>
+        <h3>Ferragens e corrediças</h3>
+        <p>Utilizamos dobradiças, corrediças telescópicas e sistemas de amortecimento para garantir qualidade e durabilidade.</p>
     </div>
-
 </section>
 
-<section class="empresa fade-up">
-
-    <img src="imagens/portatailer.jpeg" alt="Ferragens">
-
+<section class="empresa reverso">
+    <img src="imagens/refiladora.jpeg" alt="Máquinas de produção da marcenaria">
     <div>
-        <h2>Ferragens e Corrediças</h2>
-        <p>
-            Utilizamos dobradiças, corrediças telescópicas e
-            sistemas de amortecimento para garantir qualidade
-            e durabilidade.
-        </p>
-    </div>
-
-</section>
-
-<section class="empresa fade-down">
-
-    <img src="imagens/refiladora.jpeg" alt="Máquinas">
-
-    <div>
-        <h2>Máquinas e Tecnologia</h2>
-        <p>
-            Investimos constantemente em máquinas e equipamentos
-            modernos para oferecer precisão e acabamento impecável.
-        </p>
-    </div>
-
-</section>
-
-
-<section id="projetos"class="projetos fade">
-
-    <h2>Projetos</h2>
-    <hr>
-    <p>cozinhas</p>
-    <hr>
-    <div class="grid">
-
-        <div class="card">
-            <img src="imagens/cozinhaazulpetroleo.png">
-        </div>
-
-        <div class="card">
-            <img src="imagens/cozinhaverdejardin.jpeg">
-        </div>
-
-        <div class="card">
-            <img src="imagens/cozinhanew.jpeg">
-        </div>
-        
-
-    </div>
-    
-    <hr>
-    
-    <p><strong>salas</strong></p>
-    <hr>
-    <div class="grid">
-
-        <div class="card">
-            <img src="imagens/painelsala.jfif">
-        </div>
-
-        <div class="card">
-            <img src="imagens/movelsalaledps51.jpeg">
-        </div>
-
-        <div class="card">
-            <img src="imagens/homesalamarmore.jpeg">
-        </div>
-    </div>
-
-    <hr>
-    <p><strong>Quartos</strong></p>
-    <hr>
-    <div class="grid">
-
-        <div class="card">
-            <img src="imagens/WhatsApp Image 2026-08-21 at 18.26.18 (3).jpeg">
-        </div>
-
-        <div class="card">
-            <img src="imagens/guardaroupaportafechada.jpeg">
-        </div>
-
-        <div class="card">
-            <img src="imagens/guardroupled.jpeg">
-        </div>
-
-        
-    </div>
-
-    <hr>
-    <p><strong>banheiros</strong></p>
-    <hr>
-    <div class="grid">
-
-        <div class="card">
-            <img src="imagens/banheiromovel.jpeg">
-        </div>
-
-        <div class="card">
-            <img src="imagens/banheirocinza900x1600.png">
-        </div>
-
-        <div class="card">
-            <img src="imagens/baheiros (2)900x1600.png">
-        </div>
-
-        
-    </div>
-
-
-        
-</section>
-
-<section class="numeros-titulo fade">
-
-    <h2>Resultados que Falam por Nós</h2>
-
-    <p>
-        Cada projeto entregue representa confiança,
-        dedicação e o compromisso de transformar sonhos
-        em realidade.
-    </p>
-
-</section>
-
-<section class="estatisticas fade">
-
-    <div class="stat">
-        <h2 id="projetoss">0</h2>
-        <p>Projetos Entregues</p>
-    </div>
-
-    <div class="stat">
-        <h2 id="anos">0</h2>
-        <p>Anos Transformando Ambientes</p>
-    </div>
-
-    <div class="stat">
-        <h2 id="clientes">0</h2>
-        <p>Clientes Satisfeitos</p>
-    </div>
-
-    <div class="stat">
-        <h2 id="dedicacao">0</h2>
-        <p>Compromisso com a Qualidade</p>
-    </div>
-
-</section>
-
-
-
-<section class="feed-clientes">
-    
-    <section class="avaliacoes">
-        <h2>AVALIAÇÕES ⭐</h2>
-
-    <p>O que nossos clientes dizem</P>
-
-    <div class="carrossel">
-        <button class="btn prev">&#10094;</button>
-
-        <div class="slides">
-            <img src="imagens/fedbekcliente3.jpeg" class="slide ativo" alt="Avaliação 1">
-            <img src="imagens/fedbekclien4t (2).jpeg" class="slide" alt="Avaliação 2">
-            <img src="imagens/fedbekclien4t (3).jpeg" class="slide" alt="Avaliação 3">
-            <img src="imagens/fedbekclien4t (4).jpeg" class="slide" alt="Avaliação 4">
-            <img src="imagens/fedbekclien4t (5).jpeg" class="slide" alt="Avaliação 2">
-            <img src="imagens/fedbekclien4t (6).jpeg" class="slide" alt="Avaliação 3">
-            <img src="imagens/fedbekclien4t (7).jpeg" class="slide" alt="Avaliação 4">
-            <img src="imagens/fedbekclien4t (8).jpeg" class="slide" alt="Avaliação 2">
-            <img src="imagens/fedbekclien4t (9).jpeg" class="slide" alt="Avaliação 3">
-            <img src="imagens/fedbekclien4t (10).jpeg" class="slide" alt="Avaliação 4">
-            <img src="imagens/fedbekclien4t (11).jpeg" class="slide" alt="Avaliação 2">
-            <img src="imagens/fedbekclien4t (12).jpeg" class="slide" alt="Avaliação 3">
-            <img src="imagens/fedbekclient14.jpeg" class="slide" alt="Avaliação 4">
-        </div>
-
-        <button class="btn next">&#10095;</button>
-    </div>
-
-    <div class="indicadores">
-        <span class="dot ativo"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <h3>Máquinas e tecnologia</h3>
+        <p>Investimos constantemente em máquinas e equipamentos modernos para oferecer precisão e acabamento impecável.</p>
     </div>
 </section>
 
-  
+<section id="projetos" class="projetos">
+    <div class="container">
+        <div class="projetos-head">
+            <h2>Projetos entregues</h2>
+            <div class="abas">
+                <button class="aba ativa" data-alvo="cozinhas">Cozinhas</button>
+                <button class="aba" data-alvo="salas">Salas</button>
+                <button class="aba" data-alvo="quartos">Quartos</button>
+                <button class="aba" data-alvo="banheiros">Banheiros</button>
+            </div>
+        </div>
+
+        <div class="grid-portfolio ativa" id="cozinhas">
+            <img src="imagens/cozinhaazulpetroleo.png" alt="Cozinha planejada azul petróleo">
+            <img src="imagens/cozinhaverdejardin.jpeg" alt="Cozinha planejada verde jardim">
+            <img src="imagens/cozinhanew.jpeg" alt="Cozinha planejada moderna">
+        </div>
+
+        <div class="grid-portfolio" id="salas">
+            <img src="imagens/painelsala.jfif" alt="Painel de sala planejado">
+            <img src="imagens/movelsalaledps51.jpeg" alt="Móvel de sala com iluminação em LED">
+            <img src="imagens/homesalamarmore.jpeg" alt="Home de sala com acabamento em mármore">
+        </div>
+
+        <div class="grid-portfolio" id="quartos">
+            <img src="imagens/WhatsApp%20Image%202026-08-21%20at%2018.26.18%20(3).jpeg" alt="Quarto planejado">
+            <img src="imagens/guardaroupaportafechada.jpeg" alt="Guarda-roupa planejado porta fechada">
+            <img src="imagens/guardroupled.jpeg" alt="Guarda-roupa planejado com LED">
+        </div>
+
+        <div class="grid-portfolio" id="banheiros">
+            <img src="imagens/banheiromovel.jpeg" alt="Móvel de banheiro planejado">
+            <img src="imagens/banheirocinza900x1600.png" alt="Banheiro planejado cinza">
+            <img src="imagens/baheiros%20(2)900x1600.png" alt="Banheiro planejado com acabamento premium">
+        </div>
+    </div>
+</section>
+
+<section class="estatisticas-secao">
+    <div class="container">
+        <h2>Resultados que falam por nós</h2>
+        <p>Cada projeto entregue representa confiança, dedicação e o compromisso de transformar sonhos em realidade.</p>
+
+        <div class="estatisticas">
+            <div class="stat">
+                <h3 id="projetoss">0</h3>
+                <p>Projetos entregues</p>
+            </div>
+            <div class="stat">
+                <h3 id="anos">0</h3>
+                <p>Anos transformando ambientes</p>
+            </div>
+            <div class="stat">
+                <h3 id="clientes">0</h3>
+                <p>Clientes satisfeitos</p>
+            </div>
+            <div class="stat">
+                <h3 id="dedicacao">0</h3>
+                <p>Compromisso com a qualidade</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="avaliacoes">
-    <a href="https://www.google.com/search?q=fabrica+sonhos&sca_esv=a0bbf15206a54e7d&sxsrf=APpeQnu-nJw3YhsRUNBJKKo_k9UzxTwVWg:1782577165251&udm=1&lsack=Dfg_apirDunc1sQP77L3oAw&sa=X&ved=2ahUKEwjY5d-16aeVAxVprpUCHW_ZHcQQjGp6BAglEAA&biw=958&bih=902&dpr=1#sv=CAESygEKtgESswEKd0FKaVQ0dExxN1RDYWFpdGtoLUVpUVMyak9sMWNQMkRxRWQ5MlhueUN5UElfOFhkZU5OTElPUFJfdDJhU0tWc3czTGxkbUlmSUhEZFRxSk4zTklQQnNXQ0Q3cXNKVloxUkhFaVhZN2k0bjJ5NVNxYTE4UTR2MWdVEhRIZmdfYXRabi10TFd4QV9RNUloQRoiQURzcjlmUi1Ld2I4cjYzeDNVQXAwaUZhTmQ3VUJ1cjJidxIEODA1MRoBMyoAMAA4AUAAGAAg_-DnyAVKAhAC" target="_blank">
-  <button style="
-    background-color: #71829c;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  ">
-    ⭐ “Veja nossas avaliações no Google e deixe a sua também!”
-  </button>
-</a>
+    <div class="container">
+        <h2>O que nossos clientes dizem</h2>
+        <p class="sub">Avaliações reais de quem já realizou seu projeto com a gente.</p>
 
-   
+        <div class="carrossel">
+            <button class="carrossel-btn prev">&#10094;</button>
+
+            <div class="slides">
+                <img src="imagens/fedbekcliente3.jpeg" class="slide ativo" alt="Avaliação de cliente 1">
+                <img src="imagens/fedbekclien4t (2).jpeg" class="slide" alt="Avaliação de cliente 2">
+                <img src="imagens/fedbekclien4t (3).jpeg" class="slide" alt="Avaliação de cliente 3">
+                <img src="imagens/fedbekclien4t (4).jpeg" class="slide" alt="Avaliação de cliente 4">
+                <img src="imagens/fedbekclien4t (5).jpeg" class="slide" alt="Avaliação de cliente 5">
+                <img src="imagens/fedbekclien4t (6).jpeg" class="slide" alt="Avaliação de cliente 6">
+                <img src="imagens/fedbekclien4t (7).jpeg" class="slide" alt="Avaliação de cliente 7">
+                <img src="imagens/fedbekclien4t (8).jpeg" class="slide" alt="Avaliação de cliente 8">
+                <img src="imagens/fedbekclien4t (9).jpeg" class="slide" alt="Avaliação de cliente 9">
+                <img src="imagens/fedbekclien4t (10).jpeg" class="slide" alt="Avaliação de cliente 10">
+                <img src="imagens/fedbekclien4t (11).jpeg" class="slide" alt="Avaliação de cliente 11">
+                <img src="imagens/fedbekclien4t (12).jpeg" class="slide" alt="Avaliação de cliente 12">
+                <img src="imagens/fedbekclient14.jpeg" class="slide" alt="Avaliação de cliente 13">
+            </div>
+
+            <button class="carrossel-btn next">&#10095;</button>
+        </div>
+
+        <div class="indicadores">
+            <span class="dot ativo"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+
+        <a class="btn-google" target="_blank"
+           href="https://www.google.com/search?q=fabrica+sonhos&sca_esv=a0bbf15206a54e7d&sxsrf=APpeQnu-nJw3YhsRUNBJKKo_k9UzxTwVWg:1782577165251&udm=1&lsack=Dfg_apirDunc1sQP77L3oAw&sa=X&ved=2ahUKEwjY5d-16aeVAxVprpUCHW_ZHcQQjGp6BAglEAA&biw=958&bih=902&dpr=1">
+           Veja nossas avaliações no Google
+        </a>
+    </div>
 </section>
 
-<section class="diferenciais fade">
-
-<h2>Por que escolher a Fabryca de Sonhos?</h2>
-
-<div class="diferenciais-grid">
-
-<div>
-🛠️
-<h3>Qualidade</h3>
-<p>Materiais selecionados e acabamento impecável.</p>
-</div>
-
-<div>
-📐
-<h3>Projetos Personalizados</h3>
-<p>Soluções criadas para cada cliente.</p>
-</div>
-
-<div>
-🤝
-<h3>Confiança</h3>
-<p>Compromisso do início ao fim.</p>
-</div>
-
-<div>
-⏱️
-<h3>Pontualidade</h3>
-<p>Respeito aos prazos acordados.</p>
-</div>
-
-</div>
-
+<section class="diferenciais">
+    <div class="container">
+        <h2>Por que escolher a Fabryca de Sonhos?</h2>
+        <div class="diferenciais-grid">
+            <div>
+                <div class="icone">🛠️</div>
+                <h3>Qualidade</h3>
+                <p>Materiais selecionados e acabamento impecável em cada peça.</p>
+            </div>
+            <div>
+                <div class="icone">📐</div>
+                <h3>Projetos personalizados</h3>
+                <p>Soluções pensadas e desenhadas para o espaço de cada cliente.</p>
+            </div>
+            <div>
+                <div class="icone">🤝</div>
+                <h3>Confiança</h3>
+                <p>Compromisso com você do primeiro contato até a instalação final.</p>
+            </div>
+            <div>
+                <div class="icone">⏱️</div>
+                <h3>Pontualidade</h3>
+                <p>Respeito aos prazos combinados, do início ao fim do projeto.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<a href="https://wa.me/5521973663740"
-   class="whatsapp"
-   target="_blank"
-   onclick="gtag('event', 'clique_whatsapp', {
-       'event_category': 'contato',
-       'event_label': 'WhatsApp Flutuante'
-   });">
-
-    <img src="imagens/watszap.jpg" alt="WhatsApp">
-
+<a href="https://wa.me/5521973663740" class="whatsapp" target="_blank"
+   onclick="gtag('event','clique_whatsapp',{'event_category':'contato','event_label':'WhatsApp Flutuante'});">
+    <img src="imagens/watszap.jpg" alt="Fale conosco pelo WhatsApp">
 </a>
-
-
 
 <footer id="contato">
-
-    <div class="footer-grid">
-
+    <div class="container footer-grid">
         <div>
-            <img src="imagens/icon250.png" alt="">
-            
-            <p class="logo-footer">
-                Transformando sonhos em realidade.
-            </p>
+            <div class="logo-footer">
+                <img src="imagens/icon250.png" alt="Logo Fabryca de Sonhos">
+                Fabryca de Sonhos
+            </div>
+            <p>Marcenaria especializada em móveis planejados no Rio de Janeiro.</p>
         </div>
 
         <div>
@@ -1517,184 +932,114 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
         </div>
 
         <div>
-            <h3>Redes Sociais</h3>
-
-            <a href="https://instagram.com/fabrycadesonhos_" target="_blank">
-
-                <img src="imagens/instagram-30.png" alt="instagran">
-                
-            </a>
-            
-
-            <br>
-
-            <a href="https://wa.me/5521973663740" target="_blank">
-
-                <img src="imagens/whatsapp30.png" alt="">
-                
-            </a>
-
-             <br>
-
-            <a href="https://www.facebook.com/Fabrycadesonhos?locale=pt_BR" target="_blank">
-
-                <img src="imagens/Facebook_vmc30.png" alt="">
-                
-            </a>
-
-
+            <h3>Redes sociais</h3>
+            <div class="redes">
+                <a href="https://instagram.com/fabrycadesonhos_" target="_blank">
+                    <img src="imagens/instagram-30.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/5521973663740" target="_blank">
+                    <img src="imagens/whatsapp30.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com/Fabrycadesonhos?locale=pt_BR" target="_blank">
+                    <img src="imagens/Facebook_vmc30.png" alt="Facebook">
+                </a>
+            </div>
         </div>
-
     </div>
 
+    <p class="copy">© <span id="ano"></span> Fabryca de Sonhos. Todos os direitos reservados.</p>
 </footer>
 
 <script>
 
-function animarNumero(id, final, sufixo = ""){
+/* ---------- Contador de estatísticas ---------- */
 
-    let numero = document.getElementById(id);
-
+function animarNumero(id, final, sufixo){
+    const el = document.getElementById(id);
     let atual = 0;
-
-    let incremento = Math.ceil(final / 100);
-
-    let contador = setInterval(() => {
-
+    const incremento = Math.ceil(final / 80);
+    const timer = setInterval(() => {
         atual += incremento;
-
-        if(atual >= final){
-            atual = final;
-            clearInterval(contador);
-        }
-
-        numero.textContent = atual + sufixo;
-
-    },20);
-
+        if(atual >= final){ atual = final; clearInterval(timer); }
+        el.textContent = atual + sufixo;
+    }, 20);
 }
 
-let iniciou = false;
-
-window.addEventListener("scroll", () => {
-
-    let secao = document.querySelector(".estatisticas");
-
-    let posicao = secao.getBoundingClientRect().top;
-
-    let tela = window.innerHeight;
-
-    if(posicao < tela && !iniciou){
-
-        iniciou = true;
-
-        animarNumero("projetoss",900,"+");
-        animarNumero("anos",13,"+");
-        animarNumero("clientes",1200,"+");
-        animarNumero("dedicacao",100,"%");
-
+let statsIniciou = false;
+window.addEventListener('scroll', () => {
+    const secao = document.querySelector('.estatisticas-secao');
+    if(!secao) return;
+    const topo = secao.getBoundingClientRect().top;
+    if(topo < window.innerHeight && !statsIniciou){
+        statsIniciou = true;
+        animarNumero('projetoss', 900, '+');
+        animarNumero('anos', 13, '+');
+        animarNumero('clientes', 1200, '+');
+        animarNumero('dedicacao', 100, '%');
     }
-
 });
 
-</script>
+/* ---------- Abas do portfólio ---------- */
 
-<script>
-
-const elementos = document.querySelectorAll(
-    '.fade, .fade-left, .fade-right, .fade-up, .fade-down'
-);
-
-function revelar(){
-
-    elementos.forEach(elemento => {
-
-        const topo = elemento.getBoundingClientRect().top;
-
-        const tela = window.innerHeight;
-
-        if(topo < tela - 100){
-            elemento.classList.add('aparecer');
-        }
-
+document.querySelectorAll('.aba').forEach(botao => {
+    botao.addEventListener('click', () => {
+        document.querySelectorAll('.aba').forEach(b => b.classList.remove('ativa'));
+        document.querySelectorAll('.grid-portfolio').forEach(g => g.classList.remove('ativa'));
+        botao.classList.add('ativa');
+        document.getElementById(botao.dataset.alvo).classList.add('ativa');
     });
-
-}
-
-window.addEventListener('scroll', revelar);
-
-revelar();
-
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-
-let atual = 0;
-
-function mostrarSlide(index) {
-    slides.forEach(slide => slide.classList.remove("ativo"));
-    dots.forEach(dot => dot.classList.remove("ativo"));
-
-    slides[index].classList.add("ativo");
-    dots[index].classList.add("ativo");
-}
-
-document.querySelector(".next").addEventListener("click", () => {
-    atual++;
-    if (atual >= slides.length) {
-        atual = 0;
-    }
-    mostrarSlide(atual);
 });
 
-document.querySelector(".prev").addEventListener("click", () => {
-    atual--;
-    if (atual < 0) {
-        atual = slides.length - 1;
-    }
-    mostrarSlide(atual);
+/* ---------- Carrossel de avaliações ---------- */
+
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let slideAtual = 0;
+
+function mostrarSlide(index){
+    slides.forEach(s => s.classList.remove('ativo'));
+    dots.forEach(d => d.classList.remove('ativo'));
+    slides[index].classList.add('ativo');
+    dots[index % dots.length].classList.add('ativo');
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+    slideAtual = (slideAtual + 1) % slides.length;
+    mostrarSlide(slideAtual);
 });
 
-</script>
+document.querySelector('.prev').addEventListener('click', () => {
+    slideAtual = (slideAtual - 1 + slides.length) % slides.length;
+    mostrarSlide(slideAtual);
+});
 
-<script>
+/* ---------- Baralho de fotos (Projetos 3D) ---------- */
 
 (function(){
-
     const baralho = document.getElementById('baralhoSketchup');
     if(!baralho) return;
 
     function organizarBaralho(instantaneo){
-
         const total = baralho.children.length;
-
         Array.from(baralho.children).forEach((carta, i) => {
-
-            const posicao = total - 1 - i; // 0 = carta da frente
+            const posicao = total - 1 - i;
             const lado = (i % 2 === 0) ? -1 : 1;
             const rotacao = lado * Math.min(posicao * 3, 10);
             const deslocamento = posicao * -5;
             const escala = 1 - Math.min(posicao * 0.035, 0.15);
 
-            if(instantaneo){
-                carta.style.transition = 'none';
-            } else {
-                carta.style.transition = 'transform 0.5s cubic-bezier(.22,.61,.36,1), opacity 0.5s ease';
-            }
-
+            carta.style.transition = instantaneo ? 'none' : 'transform 0.5s cubic-bezier(.22,.61,.36,1), opacity 0.5s ease';
             carta.style.transform = `translateY(${deslocamento}px) rotate(${rotacao}deg) scale(${escala})`;
             carta.style.zIndex = i;
             carta.style.opacity = posicao < 5 ? '1' : '0';
 
-            if(instantaneo){
-                void carta.offsetWidth;
-            }
+            if(instantaneo){ void carta.offsetWidth; }
         });
     }
 
     organizarBaralho(true);
 
     baralho.addEventListener('click', () => {
-
         const carta = baralho.lastElementChild;
         if(!carta) return;
 
@@ -1707,8 +1052,11 @@ document.querySelector(".prev").addEventListener("click", () => {
             organizarBaralho(true);
         }, 430);
     });
-
 })();
+
+/* ---------- Ano no rodapé ---------- */
+
+document.getElementById('ano').textContent = new Date().getFullYear();
 
 </script>
 
