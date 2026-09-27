@@ -308,6 +308,90 @@ nav a{
     opacity: 0.7;
 }
 
+/* PROJETOS SKETCHUP */
+
+.projetos-sketchup{
+    padding:100px 50px;
+    text-align:center;
+    background:#f8f0ea;
+}
+
+.projetos-sketchup h2{
+    color:#1a0f05;
+    font-size:2.2rem;
+}
+
+.projetos-sketchup > p{
+    max-width:700px;
+    margin:20px auto 0;
+    line-height:1.8;
+    color:#555;
+}
+
+.projetos-sketchup .legenda{
+    margin-top:35px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing:0;
+    color:#555;
+    font-weight:normal;
+}
+
+/* BARALHO DE FOTOS */
+
+.baralho-wrap{
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.baralho{
+    position:relative;
+    width:340px;
+    height:340px;
+    max-width:85vw;
+    max-height:85vw;
+}
+
+.carta{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:14px;
+    border:6px solid #fff;
+    box-shadow:0 14px 30px rgba(0,0,0,0.28);
+    cursor:pointer;
+    pointer-events:none;
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+.carta:last-child{
+    pointer-events:auto;
+}
+
+.carta:last-child:hover{
+    filter:brightness(1.05);
+    box-shadow:0 18px 36px rgba(0,0,0,0.35);
+}
+
+.dica-baralho{
+    margin-top:28px;
+    color:#a34904;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:2px;
+    font-size:0.9rem;
+}
+
+@media(max-width:600px){
+    .baralho{
+        width:260px;
+        height:260px;
+    }
+}
+
 
 /* SERVIÇOS */
 
@@ -421,6 +505,10 @@ footer{
     }
 
     .projetos{
+        padding: 60px 20px;
+    }
+
+    .projetos-sketchup{
         padding: 60px 20px;
     }
 
@@ -1094,6 +1182,32 @@ Mais do que fabricar móveis, nós realizamos sonhos. E é por isso que seguimos
     <img src="imagens/sugar900x900.jpeg" alt="">
 </section>
 
+<section class="projetos-sketchup fade">
+
+    <h2>Projetos em 3D no SketchUp</h2>
+
+    <p>
+        Antes de colocar a mão na massa, colocamos sua ideia no papel — ou melhor, na tela.
+        Desenvolvemos cada projeto em 3D no SketchUp, para que você visualize móveis, cores,
+        acabamentos e distribuição do ambiente exatamente como vão ficar, antes mesmo da
+        produção começar. Isso significa menos surpresas, mais acertos e a certeza de que o
+        resultado final será fiel ao que você imaginou.
+    </p>
+
+    <div class="baralho-wrap">
+        <div class="baralho" id="baralhoSketchup">
+            <img class="carta" src="imagensketchup/sketchup-cozinha.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+            <img class="carta" src="imagensketchup/sketchup-quarto2.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+            <img class="carta" src="imagensketchup/sketchup-cozinha2.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+            <img class="carta" src="imagensketchup/sketchup-quarto3.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+            <img class="carta" src="imagensketchup/sketchup-cozinha.png" alt="Projeto 3D de cozinha planejada feito no SketchUp">
+            <img class="carta" src="imagensketchup/sketchup-quarto.png" alt="Projeto 3D de quarto planejado feito no SketchUp">
+        </div>
+        <p class="dica-baralho">👆 Toque nas fotos para ver os próximos projetos</p>
+    </div>
+
+</section>
+
 <section class="empresa fade-left">
 
     <img src="imagens/armarioconect.jpeg" alt="Projetos com LED">
@@ -1539,6 +1653,62 @@ document.querySelector(".prev").addEventListener("click", () => {
     }
     mostrarSlide(atual);
 });
+
+</script>
+
+<script>
+
+(function(){
+
+    const baralho = document.getElementById('baralhoSketchup');
+    if(!baralho) return;
+
+    function organizarBaralho(instantaneo){
+
+        const total = baralho.children.length;
+
+        Array.from(baralho.children).forEach((carta, i) => {
+
+            const posicao = total - 1 - i; // 0 = carta da frente
+            const lado = (i % 2 === 0) ? -1 : 1;
+            const rotacao = lado * Math.min(posicao * 3, 10);
+            const deslocamento = posicao * -5;
+            const escala = 1 - Math.min(posicao * 0.035, 0.15);
+
+            if(instantaneo){
+                carta.style.transition = 'none';
+            } else {
+                carta.style.transition = 'transform 0.5s cubic-bezier(.22,.61,.36,1), opacity 0.5s ease';
+            }
+
+            carta.style.transform = `translateY(${deslocamento}px) rotate(${rotacao}deg) scale(${escala})`;
+            carta.style.zIndex = i;
+            carta.style.opacity = posicao < 5 ? '1' : '0';
+
+            if(instantaneo){
+                void carta.offsetWidth;
+            }
+        });
+    }
+
+    organizarBaralho(true);
+
+    baralho.addEventListener('click', () => {
+
+        const carta = baralho.lastElementChild;
+        if(!carta) return;
+
+        carta.style.transition = 'transform 0.45s ease, opacity 0.4s ease';
+        carta.style.transform = 'translate(140px,-15px) rotate(20deg)';
+        carta.style.opacity = '0';
+
+        setTimeout(() => {
+            baralho.insertBefore(carta, baralho.firstChild);
+            organizarBaralho(true);
+        }, 430);
+    });
+
+})();
 
 </script>
 
